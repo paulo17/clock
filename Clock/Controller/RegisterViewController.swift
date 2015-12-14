@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class RegisterViewController: UIViewController {
     
@@ -24,11 +25,22 @@ class RegisterViewController: UIViewController {
     }
     
     func registerUser() {
+        let user = PFUser()
+        user.username = usernameTextField.text
+        user.email = emailTextField.text
+        user.password = passwordTextField.text
         
+        user.signUpInBackgroundWithBlock { (didSuccessed, error) -> Void in
+            if let error = error {
+                print(error.userInfo)
+            } else {
+                // TODO: Segue to redirect to home page and login
+            }
+        }
     }
     
     @IBAction func callRegisterUser(sender: UIButton) {
-        
+        registerUser()
     }
     
     /*
