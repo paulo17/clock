@@ -2,11 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Parse App ID</key>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>Parse Id</key>
 	<string>TMtoD0wxvIu5J62wNs8N22Febgn7CvMDhbGFviLW
 TMtoD0wxvIu5J62wNs8N22Febgn7CvMDhbGFviLW
 </string>
-	<key>Parse Client Key</key>
+	<key>Parse Key</key>
 	<string>qVnhWzCZtdw5SkJvJ7uz7wubUH2SXRDnra4Fq1pV</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>fr</string>
@@ -40,5 +42,10 @@ TMtoD0wxvIu5J62wNs8N22Febgn7CvMDhbGFviLW
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
