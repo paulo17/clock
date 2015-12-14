@@ -43,6 +43,10 @@ class RegisterViewController: UIViewController {
         registerUser()
     }
     
+    @IBAction func backAction(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
     

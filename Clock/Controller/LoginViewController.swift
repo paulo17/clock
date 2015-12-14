@@ -11,6 +11,11 @@ import Parse
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    var user: PFUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,12 +24,36 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func loginUser() {
+    func loginUser(email: String, password: String) {
+        let query = PFUser.query()
+        query!.whereKey("email", equalTo: email)
         
+        query!.getFirstObjectInBackgroundWithBlock {
+            (entity, error) -> Void in
+            
+            if error != nil || entity == nil {
+                
+            } else {
+                PFUser.logInWithUsernameInBackground(entity!["username"] as! String, password: password, block: {
+                    (PFUser, error) -> Void in
+                    if let user = PFUser {
+                        self.user = user
+                    }
+                })
+            }
+            
+        }
     }
     
     @IBAction func callLoginUser(sender: UIButton) {
-        loginUser()
+        if let email = emailTextField.text,
+            let password = passwordTextField.text {
+                loginUser(email, password: password)
+        }
+    }
+    
+    @IBAction func backAction(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*
