@@ -29,8 +29,6 @@
 #import <Bolts/BFWebViewAppLinkResolver.h>
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
-
 /*! @abstract 80175001: There were multiple errors. */
 extern NSInteger const kBFMultipleErrorsError;
 
@@ -43,5 +41,3 @@ extern NSInteger const kBFMultipleErrorsError;
 + (NSString *)version;
 
 @end
-
-NS_ASSUME_NONNULL_END

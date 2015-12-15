@@ -50,7 +50,7 @@ class EventSynchroniser {
                     if let objects = PFObjects {
                         for object in objects {
                             
-                            let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Float, long: object["long"] as! Float)
+                            let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Double, long: object["long"] as! Double)
                             events.append(event)
                             
                         }

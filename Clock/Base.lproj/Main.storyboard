@@ -477,7 +477,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Val-c8-su1" id="2le-ES-0qq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="154.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars 7 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-nf-3gE">
@@ -624,45 +624,37 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lieu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seH-JK-wCr">
-                                <rect key="frame" x="170" y="177" width="260" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5e-3B-wRO">
+                                <rect key="frame" x="170" y="178" width="260" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="bJk-f1-wV2"/>
-                                    <constraint firstAttribute="width" constant="280" id="rjq-9H-aIz"/>
-                                    <constraint firstAttribute="width" constant="260" id="umP-yd-bql"/>
+                                    <constraint firstAttribute="width" constant="260" id="h0J-Gj-VdM"/>
+                                    <constraint firstAttribute="height" constant="45" id="lI6-pN-cye"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="rjq-9H-aIz"/>
-                                    </mask>
-                                </variation>
-                            </textField>
+                                <state key="normal" title="Lieu"/>
+                                <connections>
+                                    <action selector="autocompleteClicked:" destination="DjZ-zi-mh2" eventType="touchUpInside" id="jL2-g7-4yV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="0Ih-dQ-OfN"/>
-                            <constraint firstItem="seH-JK-wCr" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="3Zt-dn-ZBE"/>
-                            <constraint firstItem="seH-JK-wCr" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="B2k-VF-HaD"/>
+                            <constraint firstItem="b5e-3B-wRO" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="22" id="2R5-Ky-jfI"/>
                             <constraint firstItem="UWI-F6-IUF" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="Cu8-uj-92Y"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="82" id="D0J-pC-Hmi"/>
                             <constraint firstItem="X92-PZ-n9X" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="RtH-PE-rqy"/>
-                            <constraint firstItem="seH-JK-wCr" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="29" id="SYT-4c-NR2"/>
-                            <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="seH-JK-wCr" secondAttribute="bottom" constant="23" id="eYR-7x-2wz"/>
+                            <constraint firstItem="b5e-3B-wRO" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="Wwt-Kl-aKO"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="47" id="fkV-OS-PKZ"/>
                             <constraint firstItem="X92-PZ-n9X" firstAttribute="top" secondItem="UWI-F6-IUF" secondAttribute="bottom" constant="26" id="mhR-Zq-B9s"/>
-                            <constraint firstItem="seH-JK-wCr" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="21" id="nUP-hM-a7w"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="oze-Zc-6lA"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="79" id="ucs-Rg-lxw"/>
+                            <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="b5e-3B-wRO" secondAttribute="bottom" constant="22" id="yxL-is-mJp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="0Ih-dQ-OfN"/>
                                 <exclude reference="D0J-pC-Hmi"/>
                                 <exclude reference="ucs-Rg-lxw"/>
-                                <exclude reference="3Zt-dn-ZBE"/>
-                                <exclude reference="SYT-4c-NR2"/>
                             </mask>
                         </variation>
                     </view>
@@ -670,7 +662,7 @@
                     <connections>
                         <outlet property="datePicker" destination="UWI-F6-IUF" id="hXR-bd-9ub"/>
                         <outlet property="nameTextField" destination="cuX-NQ-T54" id="Mid-8r-kFX"/>
-                        <outlet property="placeTextField" destination="seH-JK-wCr" id="DsM-hg-eXc"/>
+                        <outlet property="placeButton" destination="b5e-3B-wRO" id="TWr-Fd-KQT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amI-CT-zRS" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,10 +15,10 @@ class Event: ParseModelProcotol {
     let name: String
     let date: NSDate
     let address: String
-    let lat: Float
-    let long: Float
+    let lat: Double
+    let long: Double
     
-    init(name: String, date: NSDate, address: String, lat: Float, long: Float) {
+    init(name: String, date: NSDate, address: String, lat: Double, long: Double) {
         self.name = name
         self.date = date
         self.address = address

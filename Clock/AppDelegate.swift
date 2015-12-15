@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("TMtoD0wxvIu5J62wNs8N22Febgn7CvMDhbGFviLW", clientKey: "qVnhWzCZtdw5SkJvJ7uz7wubUH2SXRDnra4Fq1pV")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        //GMSServices.provideAPIKey(NSBundle.mainBundle().objectForInfoDictionaryKey("Google Api Key") as! String)
+        GMSServices.provideAPIKey("AIzaSyB5CFNfES73KgHOJKDDYt5a8ZtWnHSF0UE")
         
         checkLoginUser()
         
