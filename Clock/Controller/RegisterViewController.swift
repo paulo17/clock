@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var firstnameTextField: UITextField!
@@ -17,9 +17,17 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerButton.layer.cornerRadius = 5
+        lastnameTextField.delegate = self
+        firstnameTextField.delegate = self
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,6 +61,11 @@ class RegisterViewController: UIViewController {
 
             }
         }
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        return true
     }
     
     // MARK: - IBAction methods

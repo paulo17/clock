@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let currentUser = PFUser.currentUser()
         
         let loginView = storyboard.instantiateViewControllerWithIdentifier("loginView")
-        let HomeController = storyboard.instantiateViewControllerWithIdentifier("homeViewNav") as! UINavigationController
+        let HomeController = storyboard.instantiateViewControllerWithIdentifier("homeViewNav") as! UITabBarController
         
         if currentUser != nil {
             if let window = self.window {
