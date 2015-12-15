@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B032D281C20561800983F7D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B032D271C20561800983F7D /* CustomTextField.swift */; };
-		6B1A89221C203D4C00B72307 /* NetworkOperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */; };
-		6B1A89241C203F0E00B72307 /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89231C203F0E00B72307 /* AbstractModel.swift */; };
+		6B1A89221C203D4C00B72307 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89211C203D4C00B72307 /* NetworkOperation.swift */; };
+		6B1A89241C203F0E00B72307 /* ParseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89231C203F0E00B72307 /* ParseModelProtocol.swift */; };
 		6B1A893B1C20427200B72307 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A893A1C20427200B72307 /* Font.swift */; };
 		6B1A893D1C2042B800B72307 /* UIColorFromRGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A893C1C2042B800B72307 /* UIColorFromRGBA.swift */; };
 		6B1A89491C20460100B72307 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A893F1C20460100B72307 /* Lato-Black.ttf */; };
@@ -46,6 +46,7 @@
 		6B3BF4611C1F067B0023EC48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3BF4601C1F067B0023EC48 /* libsqlite3.tbd */; };
 		6B4CDE3E1C206D05000AB56E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */; };
 		6B4CDE401C206D82000AB56E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE3F1C206D82000AB56E /* NavigationController.swift */; };
+		6B4CDE431C208C9E000AB56E /* EventSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */; };
 		6BA81C281C20169200CF3880 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA81C271C20169200CF3880 /* Login.storyboard */; };
 		6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */; };
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
@@ -53,7 +54,6 @@
 		6BC670E71C20249B001CC579 /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E61C20249B001CC579 /* Redirect.swift */; };
 		6BC670E91C2024CE001CC579 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E81C2024CE001CC579 /* Alert.swift */; };
 		6BC670EB1C20288E001CC579 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670EA1C20288E001CC579 /* Event.swift */; };
-		6BC670EE1C202B51001CC579 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670ED1C202B51001CC579 /* NetworkManager.swift */; };
 		6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670F11C202EE0001CC579 /* EventViewController.swift */; };
 		6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE88EA01C2010C300427E57 /* HomeViewController.swift */; };
 		E46331DDA4591283FCBB8D60 /* Pods_clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8EE7798AB4B103D387937 /* Pods_clock.framework */; };
@@ -61,8 +61,8 @@
 
 /* Begin PBXFileReference section */
 		6B032D271C20561800983F7D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperationProtocol.swift; sourceTree = "<group>"; };
-		6B1A89231C203F0E00B72307 /* AbstractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
+		6B1A89211C203D4C00B72307 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		6B1A89231C203F0E00B72307 /* ParseModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseModelProtocol.swift; sourceTree = "<group>"; };
 		6B1A893A1C20427200B72307 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		6B1A893C1C2042B800B72307 /* UIColorFromRGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorFromRGBA.swift; sourceTree = "<group>"; };
 		6B1A893F1C20460100B72307 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 		6B3BF4601C1F067B0023EC48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		6B4CDE3F1C206D82000AB56E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSynchroniser.swift; sourceTree = "<group>"; };
 		6BA81C271C20169200CF3880 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Clock/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		6BC670E61C20249B001CC579 /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
 		6BC670E81C2024CE001CC579 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		6BC670EA1C20288E001CC579 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		6BC670ED1C202B51001CC579 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6BC670F11C202EE0001CC579 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		6BE88EA01C2010C300427E57 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8DFDE6C678C0114A0AE13F52 /* Pods-clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clock/Pods-clock.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +235,14 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		6B4CDE411C208C43000AB56E /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
 		6BAB9A3D1C1F3A28004D2408 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +260,7 @@
 		6BAB9A441C1F3A35004D2408 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6B1A89231C203F0E00B72307 /* AbstractModel.swift */,
+				6B1A89231C203F0E00B72307 /* ParseModelProtocol.swift */,
 				6BBE2E831C1F72760085B2D3 /* User.swift */,
 				6BC670EA1C20288E001CC579 /* Event.swift */,
 			);
@@ -286,8 +294,8 @@
 		6BC670EC1C202A11001CC579 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6BC670ED1C202B51001CC579 /* NetworkManager.swift */,
-				6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */,
+				6B4CDE411C208C43000AB56E /* Parse */,
+				6B1A89211C203D4C00B72307 /* NetworkOperation.swift */,
 			);
 			name = Network;
 			path = Clock/Network;
@@ -436,20 +444,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
+				6B4CDE431C208C9E000AB56E /* EventSynchroniser.swift in Sources */,
 				6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */,
 				6B4CDE3E1C206D05000AB56E /* AccountViewController.swift in Sources */,
 				6B1A893B1C20427200B72307 /* Font.swift in Sources */,
 				6BC670EB1C20288E001CC579 /* Event.swift in Sources */,
 				6B4CDE401C206D82000AB56E /* NavigationController.swift in Sources */,
 				6B1A893D1C2042B800B72307 /* UIColorFromRGBA.swift in Sources */,
-				6BC670EE1C202B51001CC579 /* NetworkManager.swift in Sources */,
 				6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */,
-				6B1A89241C203F0E00B72307 /* AbstractModel.swift in Sources */,
+				6B1A89241C203F0E00B72307 /* ParseModelProtocol.swift in Sources */,
 				6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */,
 				6BBE2E841C1F72760085B2D3 /* User.swift in Sources */,
 				6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */,
 				6BC670E91C2024CE001CC579 /* Alert.swift in Sources */,
-				6B1A89221C203D4C00B72307 /* NetworkOperationProtocol.swift in Sources */,
+				6B1A89221C203D4C00B72307 /* NetworkOperation.swift in Sources */,
 				6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */,
 				6B032D281C20561800983F7D /* CustomTextField.swift in Sources */,
 			);

@@ -8,7 +8,9 @@
 
 import UIKit
 
-class User: AbstractModel {
+class User: ParseModelProcotol {
+    
+    static var parseClassName = "User"
     
     let username: String
     let email: String
@@ -21,4 +23,6 @@ class User: AbstractModel {
         self.firstname = firstname
         self.lastname = lastname
     }
+    
+  
 }

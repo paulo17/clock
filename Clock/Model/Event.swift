@@ -8,9 +8,9 @@
 
 import UIKit
 
-class Event: AbstractModel {
-    
-    static let parseClassname = "Event"
+class Event: ParseModelProcotol {
+
+    static var parseClassName = "Event"
     
     let name: String
     let date: NSDate

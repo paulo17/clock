@@ -25,7 +25,9 @@ class EventViewController: UIViewController {
     }
     
     @IBAction func addEvent(sender: AnyObject) {
+        
         let event = Event(name: nameTextField.text!, date: datePicker.date, address: placeTextField.text!, lat: 0.0, long: 0.0)
-        NetworkManager.saveEvent(event)
+        EventSynchroniser.saveObject(event)
+        
     }
 }

@@ -18,6 +18,7 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -404,7 +405,7 @@
         <scene sceneID="AV0-VF-FWz">
             <objects>
                 <navigationController id="QqT-VB-uqA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="Profil" id="FJd-3w-iWg"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Profil" image="Profile icon" id="FJd-3w-iWg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tXd-hx-D93">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -421,7 +422,7 @@
         <scene sceneID="SlU-AM-zXO">
             <objects>
                 <navigationController id="fFu-yq-qAk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="Ajouter" id="XRv-Cu-Z4Y"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Ajouter" image="New icon" id="XRv-Cu-Z4Y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1TT-Ra-Su7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -568,7 +569,7 @@
             </objects>
             <point key="canvasLocation" x="1894" y="742"/>
         </scene>
-        <!--Event View Controller-->
+        <!--Evenement-->
         <scene sceneID="2Bg-6s-UNQ">
             <objects>
                 <viewController id="DjZ-zi-mh2" customClass="EventViewController" customModule="clock" customModuleProvider="target" sceneMemberID="viewController">
@@ -580,29 +581,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-NQ-T54">
-                                <rect key="frame" x="160" y="143" width="280" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="KfW-cv-FBM"/>
-                                    <constraint firstAttribute="height" constant="30" id="mZD-JN-WlY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lieu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seH-JK-wCr">
-                                <rect key="frame" x="160" y="202" width="280" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Px0-Ez-EEN"/>
-                                    <constraint firstAttribute="width" constant="280" id="rjq-9H-aIz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-F6-IUF">
-                                <rect key="frame" x="160" y="267" width="280" height="65"/>
+                                <rect key="frame" x="170" y="245" width="260" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="QBP-Cb-TZh"/>
-                                    <constraint firstAttribute="height" constant="65" id="lfa-Ju-XWc"/>
+                                    <constraint firstAttribute="width" constant="260" id="TBR-ZK-CRF"/>
+                                    <constraint firstAttribute="height" constant="65" id="WX9-4x-ypP"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="471874055.516505">
                                     <!--2015-12-15 12:07:35 +0000-->
@@ -610,49 +593,80 @@
                                 <locale key="locale" localeIdentifier="fr"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X92-PZ-n9X">
-                                <rect key="frame" x="232" y="376" width="137" height="30"/>
+                                <rect key="frame" x="170" y="336" width="260" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8Qa-Ty-Lxf"/>
-                                    <constraint firstAttribute="width" constant="137" id="F90-2F-Hj8"/>
+                                    <constraint firstAttribute="width" constant="260" id="MBw-iH-pzE"/>
+                                    <constraint firstAttribute="height" constant="45" id="g7W-k6-AXy"/>
                                 </constraints>
-                                <state key="normal" title="Ajouter l'événement"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <state key="normal" title="Top chrono">
+                                    <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addEvent:" destination="DjZ-zi-mh2" eventType="touchUpInside" id="uyp-Ht-3SQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="4KA-uy-3Ph">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-NQ-T54">
+                                <rect key="frame" x="170" y="111" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="DRH-Fl-qBy"/>
+                                    <constraint firstAttribute="height" constant="45" id="GAp-d2-YbW"/>
+                                    <constraint firstAttribute="width" constant="280" id="KfW-cv-FBM"/>
+                                    <constraint firstAttribute="height" constant="30" id="mZD-JN-WlY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KfW-cv-FBM"/>
+                                        <exclude reference="mZD-JN-WlY"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lieu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seH-JK-wCr">
+                                <rect key="frame" x="170" y="177" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bJk-f1-wV2"/>
+                                    <constraint firstAttribute="width" constant="280" id="rjq-9H-aIz"/>
+                                    <constraint firstAttribute="width" constant="260" id="umP-yd-bql"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rjq-9H-aIz"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="0Ih-dQ-OfN"/>
-                            <constraint firstItem="wNR-S1-HGn" firstAttribute="top" secondItem="4KA-uy-3Ph" secondAttribute="bottom" constant="-49" id="1Jr-UB-Vpo"/>
-                            <constraint firstItem="4KA-uy-3Ph" firstAttribute="centerY" secondItem="UWI-F6-IUF" secondAttribute="centerY" id="1wJ-Pz-nU0"/>
                             <constraint firstItem="seH-JK-wCr" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="3Zt-dn-ZBE"/>
-                            <constraint firstItem="4KA-uy-3Ph" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leading" id="523-95-46e"/>
-                            <constraint firstItem="4KA-uy-3Ph" firstAttribute="top" secondItem="0Lj-PV-d7N" secondAttribute="top" id="5mf-VO-Gsb"/>
-                            <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="seH-JK-wCr" secondAttribute="bottom" constant="35" id="RC7-Ii-SBe"/>
-                            <constraint firstItem="4KA-uy-3Ph" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="-20" id="RFY-9y-eZe"/>
+                            <constraint firstItem="seH-JK-wCr" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="B2k-VF-HaD"/>
+                            <constraint firstItem="UWI-F6-IUF" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="Cu8-uj-92Y"/>
+                            <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="82" id="D0J-pC-Hmi"/>
+                            <constraint firstItem="X92-PZ-n9X" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="RtH-PE-rqy"/>
                             <constraint firstItem="seH-JK-wCr" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="29" id="SYT-4c-NR2"/>
-                            <constraint firstItem="X92-PZ-n9X" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="Uwt-jp-cqE"/>
-                            <constraint firstItem="4KA-uy-3Ph" firstAttribute="centerX" secondItem="cuX-NQ-T54" secondAttribute="centerX" id="XZT-sn-Phm"/>
-                            <constraint firstItem="UWI-F6-IUF" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="exg-Wk-HBf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4KA-uy-3Ph" secondAttribute="trailing" constant="-20" id="i7L-dT-X8g"/>
-                            <constraint firstItem="X92-PZ-n9X" firstAttribute="top" secondItem="UWI-F6-IUF" secondAttribute="bottom" constant="44" id="rQH-gd-liE"/>
-                            <constraint firstItem="4KA-uy-3Ph" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="-64" id="tQu-O7-fHQ"/>
+                            <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="seH-JK-wCr" secondAttribute="bottom" constant="23" id="eYR-7x-2wz"/>
+                            <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="47" id="fkV-OS-PKZ"/>
+                            <constraint firstItem="X92-PZ-n9X" firstAttribute="top" secondItem="UWI-F6-IUF" secondAttribute="bottom" constant="26" id="mhR-Zq-B9s"/>
+                            <constraint firstItem="seH-JK-wCr" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="21" id="nUP-hM-a7w"/>
+                            <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="oze-Zc-6lA"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="79" id="ucs-Rg-lxw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="1wJ-Pz-nU0"/>
-                                <exclude reference="523-95-46e"/>
-                                <exclude reference="5mf-VO-Gsb"/>
-                                <exclude reference="XZT-sn-Phm"/>
+                                <exclude reference="0Ih-dQ-OfN"/>
+                                <exclude reference="D0J-pC-Hmi"/>
+                                <exclude reference="ucs-Rg-lxw"/>
+                                <exclude reference="3Zt-dn-ZBE"/>
+                                <exclude reference="SYT-4c-NR2"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="L9l-eA-VoB"/>
+                    <navigationItem key="navigationItem" title="Evenement" id="L9l-eA-VoB"/>
                     <connections>
                         <outlet property="datePicker" destination="UWI-F6-IUF" id="hXR-bd-9ub"/>
                         <outlet property="nameTextField" destination="cuX-NQ-T54" id="Mid-8r-kFX"/>
@@ -704,7 +718,7 @@
         <scene sceneID="geh-0d-w3U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xCm-r5-oJ6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Home" id="ec6-yt-c9d"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" image="Home icon" id="ec6-yt-c9d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="awU-oS-yYL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -723,6 +737,9 @@
     <resources>
         <image name="Back Button" width="8" height="12"/>
         <image name="Background" width="360" height="640"/>
+        <image name="Home icon" width="24" height="24"/>
+        <image name="New icon" width="25" height="25"/>
+        <image name="Profile icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rjT-tM-xvs"/>

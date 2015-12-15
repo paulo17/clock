@@ -9,13 +9,14 @@
 import Foundation
 import Parse
 
-protocol NetworkOperationProtocol {
+protocol NetworkOperation {
     
-    static func saveObject(model: AbstractModel)
+    static func saveObject(model: ParseModelProcotol)
     
     static func getObject() -> PFObject?
     
     static func updateObject() -> PFObject?
     
+    static func deleteObject() 
     
 }

@@ -9,7 +9,8 @@
 
 import UIKit
 
-class AbstractModel: NSObject {
-
+protocol ParseModelProcotol {
+    
+    static var parseClassName: String { get }
 
 }
