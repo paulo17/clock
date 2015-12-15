@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1A89221C203D4C00B72307 /* NetworkOperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */; };
+		6B1A89241C203F0E00B72307 /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89231C203F0E00B72307 /* AbstractModel.swift */; };
+		6B1A893B1C20427200B72307 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A893A1C20427200B72307 /* Font.swift */; };
+		6B1A893D1C2042B800B72307 /* UIColorFromRGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A893C1C2042B800B72307 /* UIColorFromRGBA.swift */; };
+		6B1A89491C20460100B72307 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A893F1C20460100B72307 /* Lato-Black.ttf */; };
+		6B1A894A1C20460100B72307 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89401C20460100B72307 /* Lato-BlackItalic.ttf */; };
+		6B1A894B1C20460100B72307 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89411C20460100B72307 /* Lato-Bold.ttf */; };
+		6B1A894C1C20460100B72307 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89421C20460100B72307 /* Lato-BoldItalic.ttf */; };
+		6B1A894D1C20460100B72307 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89431C20460100B72307 /* Lato-Hairline.ttf */; };
+		6B1A894E1C20460100B72307 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89441C20460100B72307 /* Lato-HairlineItalic.ttf */; };
+		6B1A894F1C20460100B72307 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89451C20460100B72307 /* Lato-Italic.ttf */; };
+		6B1A89501C20460100B72307 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89461C20460100B72307 /* Lato-Light.ttf */; };
+		6B1A89511C20460100B72307 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89471C20460100B72307 /* Lato-LightItalic.ttf */; };
+		6B1A89521C20460100B72307 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89481C20460100B72307 /* Lato-Regular.ttf */; };
 		6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */; };
 		6B3BF4111C1F01E40023EC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3BF40F1C1F01E40023EC48 /* Main.storyboard */; };
 		6B3BF4131C1F01E40023EC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3BF4121C1F01E40023EC48 /* Assets.xcassets */; };
@@ -32,7 +46,6 @@
 		6BA81C281C20169200CF3880 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA81C271C20169200CF3880 /* Login.storyboard */; };
 		6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */; };
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
-		6BAB9A431C1F3A28004D2408 /* SelectRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A401C1F3A28004D2408 /* SelectRegisterViewController.swift */; };
 		6BBE2E841C1F72760085B2D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2E831C1F72760085B2D3 /* User.swift */; };
 		6BC670E71C20249B001CC579 /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E61C20249B001CC579 /* Redirect.swift */; };
 		6BC670E91C2024CE001CC579 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E81C2024CE001CC579 /* Alert.swift */; };
@@ -44,6 +57,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperationProtocol.swift; sourceTree = "<group>"; };
+		6B1A89231C203F0E00B72307 /* AbstractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
+		6B1A893A1C20427200B72307 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		6B1A893C1C2042B800B72307 /* UIColorFromRGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorFromRGBA.swift; sourceTree = "<group>"; };
+		6B1A893F1C20460100B72307 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		6B1A89401C20460100B72307 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		6B1A89411C20460100B72307 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		6B1A89421C20460100B72307 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6B1A89431C20460100B72307 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		6B1A89441C20460100B72307 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		6B1A89451C20460100B72307 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		6B1A89461C20460100B72307 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		6B1A89471C20460100B72307 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		6B1A89481C20460100B72307 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6B3BF4081C1F01E40023EC48 /* clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B3BF4101C1F01E40023EC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +98,6 @@
 		6BA81C271C20169200CF3880 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Clock/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		6BAB9A401C1F3A28004D2408 /* SelectRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRegisterViewController.swift; sourceTree = "<group>"; };
 		6BBE2E831C1F72760085B2D3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BC670E61C20249B001CC579 /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
 		6BC670E81C2024CE001CC579 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -123,6 +149,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6B1A893E1C20460100B72307 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6B1A893F1C20460100B72307 /* Lato-Black.ttf */,
+				6B1A89401C20460100B72307 /* Lato-BlackItalic.ttf */,
+				6B1A89411C20460100B72307 /* Lato-Bold.ttf */,
+				6B1A89421C20460100B72307 /* Lato-BoldItalic.ttf */,
+				6B1A89431C20460100B72307 /* Lato-Hairline.ttf */,
+				6B1A89441C20460100B72307 /* Lato-HairlineItalic.ttf */,
+				6B1A89451C20460100B72307 /* Lato-Italic.ttf */,
+				6B1A89461C20460100B72307 /* Lato-Light.ttf */,
+				6B1A89471C20460100B72307 /* Lato-LightItalic.ttf */,
+				6B1A89481C20460100B72307 /* Lato-Regular.ttf */,
+			);
+			name = Fonts;
+			path = Clock/Fonts;
+			sourceTree = SOURCE_ROOT;
+		};
 		6B3BF3FF1C1F01E40023EC48 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +189,7 @@
 		6B3BF40A1C1F01E40023EC48 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				6B1A893E1C20460100B72307 /* Fonts */,
 				6BC670EC1C202A11001CC579 /* Network */,
 				6BC670E51C20249B001CC579 /* Helper */,
 				6BAB9A451C1F3A3A004D2408 /* View */,
@@ -189,7 +234,6 @@
 			children = (
 				6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */,
 				6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */,
-				6BAB9A401C1F3A28004D2408 /* SelectRegisterViewController.swift */,
 				6BE88EA01C2010C300427E57 /* HomeViewController.swift */,
 				6BC670F11C202EE0001CC579 /* EventViewController.swift */,
 			);
@@ -200,6 +244,7 @@
 		6BAB9A441C1F3A35004D2408 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B1A89231C203F0E00B72307 /* AbstractModel.swift */,
 				6BBE2E831C1F72760085B2D3 /* User.swift */,
 				6BC670EA1C20288E001CC579 /* Event.swift */,
 			);
@@ -222,6 +267,8 @@
 			children = (
 				6BC670E61C20249B001CC579 /* Redirect.swift */,
 				6BC670E81C2024CE001CC579 /* Alert.swift */,
+				6B1A893A1C20427200B72307 /* Font.swift */,
+				6B1A893C1C2042B800B72307 /* UIColorFromRGBA.swift */,
 			);
 			name = Helper;
 			path = Clock/Helper;
@@ -231,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC670ED1C202B51001CC579 /* NetworkManager.swift */,
+				6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */,
 			);
 			name = Network;
 			path = Clock/Network;
@@ -306,10 +354,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1A894A1C20460100B72307 /* Lato-BlackItalic.ttf in Resources */,
+				6B1A894F1C20460100B72307 /* Lato-Italic.ttf in Resources */,
+				6B1A894D1C20460100B72307 /* Lato-Hairline.ttf in Resources */,
+				6B1A89501C20460100B72307 /* Lato-Light.ttf in Resources */,
+				6B1A894E1C20460100B72307 /* Lato-HairlineItalic.ttf in Resources */,
 				6BA81C281C20169200CF3880 /* Login.storyboard in Resources */,
+				6B1A894C1C20460100B72307 /* Lato-BoldItalic.ttf in Resources */,
 				6B3BF4161C1F01E40023EC48 /* LaunchScreen.storyboard in Resources */,
 				6B3BF4131C1F01E40023EC48 /* Assets.xcassets in Resources */,
+				6B1A894B1C20460100B72307 /* Lato-Bold.ttf in Resources */,
+				6B1A89521C20460100B72307 /* Lato-Regular.ttf in Resources */,
+				6B1A89511C20460100B72307 /* Lato-LightItalic.ttf in Resources */,
 				6B3BF4111C1F01E40023EC48 /* Main.storyboard in Resources */,
+				6B1A89491C20460100B72307 /* Lato-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,14 +428,17 @@
 			files = (
 				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
 				6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */,
+				6B1A893B1C20427200B72307 /* Font.swift in Sources */,
 				6BC670EB1C20288E001CC579 /* Event.swift in Sources */,
+				6B1A893D1C2042B800B72307 /* UIColorFromRGBA.swift in Sources */,
 				6BC670EE1C202B51001CC579 /* NetworkManager.swift in Sources */,
 				6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */,
+				6B1A89241C203F0E00B72307 /* AbstractModel.swift in Sources */,
 				6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */,
-				6BAB9A431C1F3A28004D2408 /* SelectRegisterViewController.swift in Sources */,
 				6BBE2E841C1F72760085B2D3 /* User.swift in Sources */,
 				6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */,
 				6BC670E91C2024CE001CC579 /* Alert.swift in Sources */,
+				6B1A89221C203D4C00B72307 /* NetworkOperationProtocol.swift in Sources */,
 				6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

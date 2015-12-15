@@ -22,9 +22,9 @@ class HomeViewController: UIViewController {
 
     @IBAction func userLogout(sender: AnyObject) {
         PFUser.logOut()
-        if let selectRegisterView = self.storyboard?.instantiateViewControllerWithIdentifier("selectRegisterView") {
-            selectRegisterView.modalTransitionStyle = .FlipHorizontal
-            presentViewController(selectRegisterView, animated: true, completion: nil)
+        if let loginView = self.storyboard?.instantiateViewControllerWithIdentifier("loginView") {
+            loginView.modalTransitionStyle = .FlipHorizontal
+            presentViewController(loginView, animated: true, completion: nil)
         }
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class User: NSObject {
+class User: AbstractModel {
     
     let username: String
     let email: String

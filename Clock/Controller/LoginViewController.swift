@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                     (PFUser, error) -> Void in
                     
                     if PFUser != nil {
-                        if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeView") {
+                        if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeViewNav") {
                             redirect(from: self, to: homeViewController)
                         }
                     } else {
@@ -50,6 +50,8 @@ class LoginViewController: UIViewController {
         }
     }
     
+
+    
     // MARK: - IBAction methods
     
     @IBAction func callLoginUser(sender: UIButton) {
@@ -57,10 +59,6 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text {
                 loginUser(email, password: password)
         }
-    }
-    
-    @IBAction func backAction(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 

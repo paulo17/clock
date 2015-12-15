@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func checkLoginUser() {
         let currentUser = PFUser.currentUser()
         
-        let SelectRegisterController = storyboard.instantiateViewControllerWithIdentifier("selectRegisterView")
-        let HomeController = storyboard.instantiateViewControllerWithIdentifier("homeView") 
+        let loginView = storyboard.instantiateViewControllerWithIdentifier("loginView")
+        let HomeController = storyboard.instantiateViewControllerWithIdentifier("homeViewNav") as! UINavigationController
         
         if currentUser != nil {
             if let window = self.window {
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         } else {
             if let window = self.window {
-                window.rootViewController = SelectRegisterController
+                window.rootViewController = loginView
             }
         }
     }

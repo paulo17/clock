@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
             } else {
                 
                 // redirect to home view controller
-                if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeView") {
+                if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeViewNav") {
                     redirect(from: self, to: homeViewController)
                 }
 
