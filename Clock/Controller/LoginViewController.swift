@@ -22,24 +22,26 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Parse methods
+    
     func loginUser(email: String, password: String) {
         let query = PFUser.query()
         query!.whereKey("email", equalTo: email)
         
-        query!.getFirstObjectInBackgroundWithBlock {
-            (entity, error) -> Void in
+        query!.getFirstObjectInBackgroundWithBlock { (entity, error) -> Void in
             
             if error != nil || entity == nil {
-                
+                alertDefault(self, message: "Email incorrect")
             } else {
                 PFUser.logInWithUsernameInBackground(entity!["username"] as! String, password: password, block: {
                     (PFUser, error) -> Void in
                     
                     if PFUser != nil {
-                        // redirect to home view controller
                         if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeView") {
                             redirect(from: self, to: homeViewController)
                         }
+                    } else {
+                        alertDefault(self, message: "Email ou mot de passe incorrect")
                     }
                     
                 })
@@ -47,6 +49,8 @@ class LoginViewController: UIViewController {
             
         }
     }
+    
+    // MARK: - IBAction methods
     
     @IBAction func callLoginUser(sender: UIButton) {
         if let email = emailTextField.text,
@@ -59,14 +63,5 @@ class LoginViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
+
 }

@@ -42,9 +42,7 @@ class RegisterViewController: UIViewController {
                     message = e as! String
                 }
                 
-                let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                alertDefault(self, message: message)
                 
             } else {
                 

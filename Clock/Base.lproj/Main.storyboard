@@ -5,22 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="0zI-t8-cbn">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CPW-79-C8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="YRm-WR-fAH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qr4-8a-5wM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Zz0-6z-TM9" kind="relationship" relationship="rootViewController" id="6Sz-Yq-jto"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-691" y="-22"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="Uf5-4R-DF3">
             <objects>
@@ -290,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRW-Sf-YcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-22"/>
+            <point key="canvasLocation" x="-352" y="-80"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="IfE-j7-dU1">

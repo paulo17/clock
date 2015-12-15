@@ -34,7 +34,8 @@
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
 		6BAB9A431C1F3A28004D2408 /* SelectRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A401C1F3A28004D2408 /* SelectRegisterViewController.swift */; };
 		6BBE2E841C1F72760085B2D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE2E831C1F72760085B2D3 /* User.swift */; };
-		6BC670E41C201F41001CC579 /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E31C201F41001CC579 /* Redirect.swift */; };
+		6BC670E71C20249B001CC579 /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E61C20249B001CC579 /* Redirect.swift */; };
+		6BC670E91C2024CE001CC579 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E81C2024CE001CC579 /* Alert.swift */; };
 		6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE88EA01C2010C300427E57 /* HomeViewController.swift */; };
 		E46331DDA4591283FCBB8D60 /* Pods_clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8EE7798AB4B103D387937 /* Pods_clock.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +70,8 @@
 		6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6BAB9A401C1F3A28004D2408 /* SelectRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRegisterViewController.swift; sourceTree = "<group>"; };
 		6BBE2E831C1F72760085B2D3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		6BC670E31C201F41001CC579 /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
+		6BC670E61C20249B001CC579 /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
+		6BC670E81C2024CE001CC579 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		6BE88EA01C2010C300427E57 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8DFDE6C678C0114A0AE13F52 /* Pods-clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clock/Pods-clock.debug.xcconfig"; sourceTree = "<group>"; };
 		95A8EE7798AB4B103D387937 /* Pods_clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,16 +139,14 @@
 		6B3BF40A1C1F01E40023EC48 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
-				6BC670E21C201F2C001CC579 /* Helpers */,
+				6BC670E51C20249B001CC579 /* Helper */,
 				6BAB9A451C1F3A3A004D2408 /* View */,
 				6BAB9A441C1F3A35004D2408 /* Model */,
 				6BAB9A3D1C1F3A28004D2408 /* Controller */,
 				6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */,
-				6B3BF40F1C1F01E40023EC48 /* Main.storyboard */,
 				6B3BF4121C1F01E40023EC48 /* Assets.xcassets */,
 				6B3BF4141C1F01E40023EC48 /* LaunchScreen.storyboard */,
 				6B3BF4171C1F01E40023EC48 /* Info.plist */,
-				6BA81C271C20169200CF3880 /* Login.storyboard */,
 			);
 			name = Clock;
 			path = clock;
@@ -201,18 +201,22 @@
 		6BAB9A451C1F3A3A004D2408 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B3BF40F1C1F01E40023EC48 /* Main.storyboard */,
+				6BA81C271C20169200CF3880 /* Login.storyboard */,
 			);
 			name = View;
 			path = Clock/View;
 			sourceTree = SOURCE_ROOT;
 		};
-		6BC670E21C201F2C001CC579 /* Helpers */ = {
+		6BC670E51C20249B001CC579 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				6BC670E31C201F41001CC579 /* Redirect.swift */,
+				6BC670E61C20249B001CC579 /* Redirect.swift */,
+				6BC670E81C2024CE001CC579 /* Alert.swift */,
 			);
-			name = Helpers;
-			sourceTree = "<group>";
+			name = Helper;
+			path = Clock/Helper;
+			sourceTree = SOURCE_ROOT;
 		};
 		8BC5798C66C8B6A0BFA21757 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -346,12 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC670E41C201F41001CC579 /* Redirect.swift in Sources */,
+				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
 				6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */,
 				6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */,
 				6BAB9A431C1F3A28004D2408 /* SelectRegisterViewController.swift in Sources */,
 				6BBE2E841C1F72760085B2D3 /* User.swift in Sources */,
 				6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */,
+				6BC670E91C2024CE001CC579 /* Alert.swift in Sources */,
 				6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +370,7 @@
 				6B3BF4101C1F01E40023EC48 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../clock;
 			sourceTree = "<group>";
 		};
 		6B3BF4141C1F01E40023EC48 /* LaunchScreen.storyboard */ = {
