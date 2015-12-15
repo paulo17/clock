@@ -13,14 +13,35 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Parse.setApplicationId("TMtoD0wxvIu5J62wNs8N22Febgn7CvMDhbGFviLW", clientKey: "qVnhWzCZtdw5SkJvJ7uz7wubUH2SXRDnra4Fq1pV")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        checkLoginUser()
+        
         return true
     }
+    
+    func checkLoginUser() {
+        let currentUser = PFUser.currentUser()
+        
+        let SelectRegisterController = storyboard.instantiateViewControllerWithIdentifier("selectRegisterView")
+        let HomeController = storyboard.instantiateViewControllerWithIdentifier("homeView") 
+        
+        if currentUser != nil {
+            if let window = self.window {
+                window.rootViewController = HomeController
+            }
+        } else {
+            if let window = self.window {
+                window.rootViewController = SelectRegisterController
+            }
+        }
+    }
+    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -11,6 +11,8 @@ import Parse
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet weak var lastnameTextField: UITextField!
+    @IBOutlet weak var firstnameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,12 +31,28 @@ class RegisterViewController: UIViewController {
         user.username = usernameTextField.text
         user.email = emailTextField.text
         user.password = passwordTextField.text
+        user["lastname"] = lastnameTextField.text
+        user["firstname"] = firstnameTextField.text
         
         user.signUpInBackgroundWithBlock { (didSuccessed, error) -> Void in
             if let error = error {
-                print(error.userInfo)
+                
+                var message = "Erreur lors de l'inscription"
+                if let e = error.userInfo["error"] {
+                    message = e as! String
+                }
+                
+                let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
             } else {
-                // TODO: Segue to redirect to home page and login
+                
+                // redirect to home view controller
+                if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeView") {
+                    redirect(from: self, to: homeViewController)
+                }
+
             }
         }
     }
@@ -46,6 +64,8 @@ class RegisterViewController: UIViewController {
     @IBAction func backAction(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
     
     /*
     // MARK: - Navigation

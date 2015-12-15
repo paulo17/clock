@@ -14,8 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var user: PFUser?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,9 +34,14 @@ class LoginViewController: UIViewController {
             } else {
                 PFUser.logInWithUsernameInBackground(entity!["username"] as! String, password: password, block: {
                     (PFUser, error) -> Void in
-                    if let user = PFUser {
-                        self.user = user
+                    
+                    if PFUser != nil {
+                        // redirect to home view controller
+                        if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeView") {
+                            redirect(from: self, to: homeViewController)
+                        }
                     }
+                    
                 })
             }
             
