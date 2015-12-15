@@ -64,6 +64,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if lastnameTextField.text != "" && firstnameTextField.text != "" && usernameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" {
+            registerButton.backgroundColor = UIColorFromRGBA("FFFFFF", alpha: 1.0)
+            registerButton.enabled = true
+        } else {
+            registerButton.backgroundColor = UIColorFromRGBA("FFFFFF", alpha: 0.5)
+            registerButton.enabled = false
+        }
         
         return true
     }

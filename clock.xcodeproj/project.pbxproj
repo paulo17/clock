@@ -44,6 +44,8 @@
 		6B3BF45D1C1F066D0023EC48 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3BF45C1C1F066D0023EC48 /* SystemConfiguration.framework */; };
 		6B3BF45F1C1F06740023EC48 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3BF45E1C1F06740023EC48 /* libz.tbd */; };
 		6B3BF4611C1F067B0023EC48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3BF4601C1F067B0023EC48 /* libsqlite3.tbd */; };
+		6B4CDE3E1C206D05000AB56E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */; };
+		6B4CDE401C206D82000AB56E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE3F1C206D82000AB56E /* NavigationController.swift */; };
 		6BA81C281C20169200CF3880 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA81C271C20169200CF3880 /* Login.storyboard */; };
 		6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */; };
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
@@ -97,6 +99,8 @@
 		6B3BF45C1C1F066D0023EC48 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6B3BF45E1C1F06740023EC48 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B3BF4601C1F067B0023EC48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		6B4CDE3F1C206D82000AB56E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		6BA81C271C20169200CF3880 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Clock/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */,
 				6BE88EA01C2010C300427E57 /* HomeViewController.swift */,
 				6BC670F11C202EE0001CC579 /* EventViewController.swift */,
+				6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */,
+				6B4CDE3F1C206D82000AB56E /* NavigationController.swift */,
 			);
 			name = Controller;
 			path = Clock/Controller;
@@ -431,8 +437,10 @@
 			files = (
 				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
 				6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */,
+				6B4CDE3E1C206D05000AB56E /* AccountViewController.swift in Sources */,
 				6B1A893B1C20427200B72307 /* Font.swift in Sources */,
 				6BC670EB1C20288E001CC579 /* Event.swift in Sources */,
+				6B4CDE401C206D82000AB56E /* NavigationController.swift in Sources */,
 				6B1A893D1C2042B800B72307 /* UIColorFromRGBA.swift in Sources */,
 				6BC670EE1C202B51001CC579 /* NetworkManager.swift in Sources */,
 				6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */,

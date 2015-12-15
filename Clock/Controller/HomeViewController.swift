@@ -11,6 +11,8 @@ import Parse
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var eventTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,6 +30,10 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
+    
+    
+
     /*
     // MARK: - Navigation
 
