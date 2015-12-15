@@ -13,9 +13,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        loginButton.layer.cornerRadius = 5
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,6 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                     } else {
                         alertDefault(self, message: "Email ou mot de passe incorrect")
+                        passwordTextField.text = ""
                     }
                     
                 })
@@ -49,8 +55,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-    
 
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            loginButton.enabled = true
+            loginButton.backgroundColor = UIColorFromRGBA("FFFFFF", alpha: 1.0)
+        } else {
+            loginButton.enabled = false
+            loginButton.backgroundColor = UIColorFromRGBA("FFFFFF", alpha: 0.5)
+        }
+        
+        return true
+    }
     
     // MARK: - IBAction methods
     

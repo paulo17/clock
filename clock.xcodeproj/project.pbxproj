@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B032D281C20561800983F7D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B032D271C20561800983F7D /* CustomTextField.swift */; };
 		6B1A89221C203D4C00B72307 /* NetworkOperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */; };
 		6B1A89241C203F0E00B72307 /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A89231C203F0E00B72307 /* AbstractModel.swift */; };
 		6B1A893B1C20427200B72307 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A893A1C20427200B72307 /* Font.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B032D271C20561800983F7D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6B1A89211C203D4C00B72307 /* NetworkOperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperationProtocol.swift; sourceTree = "<group>"; };
 		6B1A89231C203F0E00B72307 /* AbstractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
 		6B1A893A1C20427200B72307 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				6BC670E81C2024CE001CC579 /* Alert.swift */,
 				6B1A893A1C20427200B72307 /* Font.swift */,
 				6B1A893C1C2042B800B72307 /* UIColorFromRGBA.swift */,
+				6B032D271C20561800983F7D /* CustomTextField.swift */,
 			);
 			name = Helper;
 			path = Clock/Helper;
@@ -440,6 +443,7 @@
 				6BC670E91C2024CE001CC579 /* Alert.swift in Sources */,
 				6B1A89221C203D4C00B72307 /* NetworkOperationProtocol.swift in Sources */,
 				6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */,
+				6B032D281C20561800983F7D /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
