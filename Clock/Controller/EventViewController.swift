@@ -29,7 +29,8 @@ class EventViewController: UIViewController {
     }
     
     
-    // Present the Autocomplete view controller when the button is pressed.
+    // Mark: - Action methods
+    
     @IBAction func autocompleteClicked(sender: AnyObject) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
@@ -42,6 +43,7 @@ class EventViewController: UIViewController {
         if let address = self.address, let location = self.coordonate {
             let event = Event(name: nameTextField.text!, date: datePicker.date, address: address, lat: location.lat, long: location.long)
             EventSynchroniser.saveObject(event)
+            
         }
     }
 }

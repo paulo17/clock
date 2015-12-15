@@ -36,9 +36,7 @@ class EventSynchroniser {
         
     }
     
-    static func getUserEvent() -> [Event]? {
-        
-        var events: [Event] = [Event]()
+    static func getUserEvent(completionHandler: (events: [Event]?, error: NSError?) -> ()) {
         
         if let user = PFUser.currentUser() {
             
@@ -48,19 +46,24 @@ class EventSynchroniser {
             query.findObjectsInBackgroundWithBlock({ (PFObjects, error) -> Void in
                 if error == nil {
                     if let objects = PFObjects {
+                        
+                        var events: [Event] = [Event]()
+                        
                         for object in objects {
                             
                             let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Double, long: object["long"] as! Double)
                             events.append(event)
                             
                         }
+                        
+                        completionHandler(events: events, error: nil)
                     }
                 }
+                
+                completionHandler(events: nil, error: error)
             })
             
         }
-        
-        return events
     }
     
     

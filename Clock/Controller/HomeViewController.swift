@@ -9,12 +9,24 @@
 import UIKit
 import Parse
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var eventTableView: UITableView!
     
+    lazy var events = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        EventSynchroniser.getUserEvent { (events, error) -> () in
+            if let e = events {
+                self.events += e
+                
+                // TODO: Refresh data in table view
+                print(self.events.count)
+            }
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +42,15 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(EventTableViewCell.identifier, forIndexPath: indexPath) as! EventTableViewCell
+        
+        return cell
+    }
     
     
     

@@ -57,6 +57,8 @@
 		6B4CDE3E1C206D05000AB56E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */; };
 		6B4CDE401C206D82000AB56E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE3F1C206D82000AB56E /* NavigationController.swift */; };
 		6B4CDE431C208C9E000AB56E /* EventSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */; };
+		6B5D4D3E1C20C0B300B7EB09 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */; };
+		6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */; };
 		6BA81C281C20169200CF3880 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA81C271C20169200CF3880 /* Login.storyboard */; };
 		6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */; };
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
@@ -124,8 +126,10 @@
 		6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		6B4CDE3F1C206D82000AB56E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSynchroniser.swift; sourceTree = "<group>"; };
+		6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		6B93FB081C20A8E600258CB1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Pods/../build/Debug-iphoneos/FacebookSDK.framework"; sourceTree = "<group>"; };
-		6B93FB0A1C20AA9F00258CB1 /* clock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clock-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B93FB0A1C20AA9F00258CB1 /* clock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "clock-Bridging-Header.h"; path = "../../clock/clock-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B93FB0D1C20AAF900258CB1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		6B93FB0F1C20ABB400258CB1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		6B93FB101C20ABB400258CB1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -239,9 +243,7 @@
 				6BAB9A3D1C1F3A28004D2408 /* Controller */,
 				6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */,
 				6B3BF4121C1F01E40023EC48 /* Assets.xcassets */,
-				6B3BF4141C1F01E40023EC48 /* LaunchScreen.storyboard */,
 				6B3BF4171C1F01E40023EC48 /* Info.plist */,
-				6B93FB0A1C20AA9F00258CB1 /* clock-Bridging-Header.h */,
 			);
 			name = Clock;
 			path = clock;
@@ -292,6 +294,14 @@
 			name = Parse;
 			sourceTree = "<group>";
 		};
+		6B5D4D3C1C20C09100B7EB09 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		6BAB9A3D1C1F3A28004D2408 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +311,7 @@
 				6BC670F11C202EE0001CC579 /* EventViewController.swift */,
 				6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */,
 				6B4CDE3F1C206D82000AB56E /* NavigationController.swift */,
+				6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */,
 			);
 			name = Controller;
 			path = Clock/Controller;
@@ -320,6 +331,8 @@
 		6BAB9A451C1F3A3A004D2408 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B5D4D3C1C20C09100B7EB09 /* Cell */,
+				6B3BF4141C1F01E40023EC48 /* LaunchScreen.storyboard */,
 				6B3BF40F1C1F01E40023EC48 /* Main.storyboard */,
 				6BA81C271C20169200CF3880 /* Login.storyboard */,
 			);
@@ -330,6 +343,7 @@
 		6BC670E51C20249B001CC579 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6B93FB0A1C20AA9F00258CB1 /* clock-Bridging-Header.h */,
 				6BC670E61C20249B001CC579 /* Redirect.swift */,
 				6BC670E81C2024CE001CC579 /* Alert.swift */,
 				6B1A893A1C20427200B72307 /* Font.swift */,
@@ -497,6 +511,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5D4D3E1C20C0B300B7EB09 /* EventTableViewCell.swift in Sources */,
+				6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */,
 				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
 				6B4CDE431C208C9E000AB56E /* EventSynchroniser.swift in Sources */,
 				6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */,
@@ -535,6 +551,7 @@
 				6B3BF4151C1F01E40023EC48 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../../clock;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
