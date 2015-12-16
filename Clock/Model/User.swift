@@ -12,20 +12,19 @@ class User: ParseModelProcotol {
     
     static var parseClassName = "User"
     
+    var PFobject: PFObject?
+    
     let username: String
     let email: String
     let firstname: String?
     let lastname: String?
     
-    init(username: String, email: String, firstname: String, lastname: String) {
+    init(object: PFObject, username: String, email: String, firstname: String, lastname: String) {
+        self.PFobject = object
         self.username = username
         self.email = email
         self.firstname = firstname
         self.lastname = lastname
-    }
-    
-    func modelToPFObject() -> PFObject {
-        return PFObject(className: User.parseClassName)
     }
     
 }

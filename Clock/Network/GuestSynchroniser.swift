@@ -14,7 +14,7 @@ class GuestSynchroniser {
         
         let PFGuest = PFObject(className: Guest.parseClassName)
         
-        PFGuest["event"] = guest.event.modelToPFObject()
+        PFGuest["event"] = guest.event
         PFGuest["user"] = guest.user
         
         PFGuest.saveInBackground()
@@ -26,10 +26,11 @@ class GuestSynchroniser {
         }
     }
     
-    static func getGuestsByEvent(event: Event, completionHandler: (users: [PFUser]?, error: NSError?) -> Void) {
+    static func getGuestsByEvent(event: PFObject, completionHandler: (users: [PFUser]?, error: NSError?) -> Void) {
+        
         let query = PFQuery(className: Guest.parseClassName)
-        query.whereKey("event", equalTo: event.modelToPFObject())
-
+        query.whereKey("event", equalTo: event)
+        
         query.findObjectsInBackgroundWithBlock({ (PFObjects, error) -> Void in
             if error == nil {
                 if let objects = PFObjects {
@@ -46,5 +47,6 @@ class GuestSynchroniser {
             
             completionHandler(users: nil, error: error)
         })
+    
     }
 }

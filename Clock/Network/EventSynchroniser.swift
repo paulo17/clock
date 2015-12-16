@@ -10,7 +10,7 @@ import Parse
 
 class EventSynchroniser {
     
-    static func saveObject(event: Event) {
+    static func saveObject(event: Event) -> PFObject {
         
         let PFEvent = PFObject(className: Event.parseClassName)
         
@@ -22,6 +22,8 @@ class EventSynchroniser {
         PFEvent["user"] = PFUser.currentUser()
         
         PFEvent.saveInBackground()
+        
+        return PFEvent
     }
     
     static func getObject() -> PFObject? {
@@ -57,8 +59,9 @@ class EventSynchroniser {
                             }
                             
                             let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Double, long: object["long"] as! Double, loose: loose)
+                            event.PFobject = object
                             events.append(event)
-                            
+    
                         }
                         
                         completionHandler(events: events, error: nil)

@@ -44,9 +44,10 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
             
             let event = Event(name: name, date: date, address: address, lat: location.lat, long: location.long, loose: loose)
             
-            let guests = Guest.instanciateGuests(event, users: self.users)
+            let PFEvent = EventSynchroniser.saveObject(event)
+            event.PFobject = PFEvent
             
-            EventSynchroniser.saveObject(event)
+            let guests = Guest.instanciateGuests(PFEvent, users: self.users)
             GuestSynchroniser.saveObjects(guests)
             
             // redirect to home view controller

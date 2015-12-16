@@ -12,15 +12,17 @@ class Guest: ParseModelProcotol {
     
     static var parseClassName = "Guest"
     
-    let event: Event
+    var PFobject: PFObject?
+    
+    let event: PFObject
     let user: PFUser
     
-    init(event: Event, user: PFUser) {
+    init(event: PFObject, user: PFUser) {
         self.event = event
         self.user = user
     }
     
-    static func instanciateGuests(event: Event, users: [PFUser]) -> [Guest] {
+    static func instanciateGuests(event: PFObject, users: [PFUser]) -> [Guest] {
         var guests = [Guest]()
         
         for user in users {
@@ -30,8 +32,4 @@ class Guest: ParseModelProcotol {
         return guests
     }
     
-    func modelToPFObject() -> PFObject {
-        return PFObject(className: Guest.parseClassName)
-    }
-
 }

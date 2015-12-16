@@ -17,6 +17,8 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var looseLabel: UILabel!
     @IBOutlet weak var completeDate: UILabel!
     
+    @IBOutlet weak var friendCollection: UICollectionView!
+    
     var event: Event!
     lazy var users = [PFUser]()
     
@@ -32,7 +34,22 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         dateLabel.text = event.date.toString(format: .Custom("HH:mm"))
         addressLabel.text = event.address
         completeDate.text = event.date.toString(format: .ISO8601(ISO8601Format.Date))
+    }
+    
+    func getGuests() {
         
+        if let PFEvent = event.PFobject {
+            
+            GuestSynchroniser.getGuestsByEvent(PFEvent) { (fetchedUsers, error) -> Void in
+                if error == nil {
+                    if let users = fetchedUsers {
+                        self.users += users
+                        self.friendCollection.reloadData()
+                    }
+                }
+            }
+            
+        }
     }
     
     // MARK: - UICollectionView DataSource & Delegate

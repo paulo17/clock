@@ -27,9 +27,6 @@ class EventViewController: UIViewController, UITextFieldDelegate {
         placeButton.layer.cornerRadius = 5
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: - Textfield Delegate
 

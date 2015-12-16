@@ -12,7 +12,6 @@ import Parse
 protocol ParseModelProcotol {
     
     static var parseClassName: String { get }
-    
-    func modelToPFObject() -> PFObject
 
+    var PFobject: PFObject? { get set }
 }

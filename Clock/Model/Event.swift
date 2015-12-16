@@ -12,6 +12,8 @@ class Event: ParseModelProcotol {
     
     static var parseClassName = "Event"
     
+    var PFobject: PFObject?
+    
     let name: String?
     let date: NSDate
     let address: String
@@ -26,20 +28,6 @@ class Event: ParseModelProcotol {
         self.lat = lat
         self.long = long
         self.loose = loose
-    }
-    
-    func modelToPFObject() -> PFObject {
-        let PFEvent = PFObject(className: Event.parseClassName)
-        
-        PFEvent["name"] = name
-        PFEvent["date"] = date
-        PFEvent["address"] = address
-        PFEvent["lat"] = lat
-        PFEvent["long"] = long
-        PFEvent["user"] = PFUser.currentUser()
-        PFEvent["loose"] = loose
-        
-        return PFEvent
     }
     
 }
