@@ -8,7 +8,7 @@
 
 import Parse
 
-class EventFriendViewController: UIViewController {
+class EventFriendViewController: UIViewController, SearchFriendDelegate {
     
     var name: String!
     var date: NSDate!
@@ -19,6 +19,8 @@ class EventFriendViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = name
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,8 +42,20 @@ class EventFriendViewController: UIViewController {
             }
         }
     }
+    
+    
+    func getFriends(value: [PFUser], sender: AnyObject) {
+        print(value)
+    }
 
     @IBAction func inviteFriend(sender: AnyObject) {
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SearchFriend" {
+            let searchFriendViewController = segue.destinationViewController as! SearchFriendViewController
+            searchFriendViewController.delegate = self
+        }
     }
 }

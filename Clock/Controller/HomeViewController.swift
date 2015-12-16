@@ -32,15 +32,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
     }
     
-    
-    @IBAction func userLogout(sender: AnyObject) {
-        PFUser.logOut()
-        if let loginView = self.storyboard?.instantiateViewControllerWithIdentifier("loginView") {
-            loginView.modalTransitionStyle = .FlipHorizontal
-            presentViewController(loginView, animated: true, completion: nil)
-        }
-    }
-    
     // MARK: - Tableview Datasource & Delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count

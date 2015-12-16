@@ -19,5 +19,12 @@ class AccountViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func userLogout(sender: AnyObject) {
+        PFUser.logOut()
+        if let loginView = self.storyboard?.instantiateViewControllerWithIdentifier("loginView") {
+            loginView.modalTransitionStyle = .FlipHorizontal
+            presentViewController(loginView, animated: true, completion: nil)
+        }
+    }
 
 }
