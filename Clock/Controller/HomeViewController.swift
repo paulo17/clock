@@ -20,10 +20,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         EventSynchroniser.getUserEvent { (events, error) -> () in
             if let e = events {
-                self.events += e
                 
-                // TODO: Refresh data in table view
-                print(self.events.count)
+                self.events += e
+                self.eventTableView.reloadData()
             }
         }
     
@@ -42,6 +41,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    // MARK: - Tableview Datasource & Delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
@@ -49,13 +49,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(EventTableViewCell.identifier, forIndexPath: indexPath) as! EventTableViewCell
         
+        cell.addressLabel.text = events[indexPath.row].address
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        let dateString = dateFormatter.stringFromDate(events[indexPath.row].date)
+        
+        cell.dateLabel.text = dateString
+        
         return cell
     }
     
     
-    
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -63,6 +68,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

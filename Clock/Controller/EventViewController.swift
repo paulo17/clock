@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import GoogleMaps
 
-class EventViewController: UIViewController {
+class EventViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -22,13 +22,24 @@ class EventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        placeButton.layer.cornerRadius = 0.5
+        nameTextField.delegate = self
+        placeButton.layer.cornerRadius = 5
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true;
+    }
     
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        nameTextField.resignFirstResponder()
+        self.view.endEditing(true)
+    }
     
     // Mark: - Action methods
     

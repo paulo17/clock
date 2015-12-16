@@ -484,15 +484,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="154.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars 7 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-nf-3gE">
-                                                    <rect key="frame" x="253" y="91" width="94" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="vuh-7x-kAD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOb-15-oHL">
                                                     <rect key="frame" x="210" y="34" width="180" height="55"/>
                                                     <constraints>
@@ -503,16 +494,27 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43 rue des prairies, 75020 Paris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-nf-3gE">
+                                                    <rect key="frame" x="179" y="88" width="243" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="vuh-7x-kAD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="6nk-nf-3gE" firstAttribute="centerX" secondItem="2le-ES-0qq" secondAttribute="centerX" id="6RC-VV-1vG"/>
                                                 <constraint firstItem="rOb-15-oHL" firstAttribute="top" secondItem="2le-ES-0qq" secondAttribute="topMargin" constant="26" id="7rs-gQ-UKJ"/>
-                                                <constraint firstItem="6nk-nf-3gE" firstAttribute="top" secondItem="rOb-15-oHL" secondAttribute="bottom" constant="2" id="UCM-sm-Eve"/>
+                                                <constraint firstItem="6nk-nf-3gE" firstAttribute="top" secondItem="rOb-15-oHL" secondAttribute="bottom" constant="-1" id="UCM-sm-Eve"/>
                                                 <constraint firstItem="rOb-15-oHL" firstAttribute="centerX" secondItem="2le-ES-0qq" secondAttribute="centerX" id="rQf-Uk-rLt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="addressLabel" destination="6nk-nf-3gE" id="yme-fU-lhJ"/>
+                                            <outlet property="dateLabel" destination="rOb-15-oHL" id="7bh-z2-brm"/>
                                             <segue destination="Zlk-5A-gxd" kind="show" id="rjT-tM-xvs">
                                                 <segue key="commit" inheritsFrom="parent" id="AGg-lq-Y9b"/>
                                                 <segue key="preview" inheritsFrom="commit" id="R03-UC-jXe"/>
@@ -556,13 +558,11 @@
                     <navigationItem key="navigationItem" title="Mes clocks" id="yLO-7C-7x1">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="i4L-y5-mNd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vRi-jH-c5l">
-                                <rect key="frame" x="20" y="7" width="48" height="30"/>
+                                <rect key="frame" x="20" y="7" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="c9b-ko-YEn"/>
-                                    <constraint firstAttribute="height" constant="30" id="dL6-93-p7i"/>
-                                </constraints>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Deconnexion">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="userLogout:" destination="Xw7-xC-sxb" eventType="touchUpInside" id="Jem-iT-6l0"/>
                                 </connections>

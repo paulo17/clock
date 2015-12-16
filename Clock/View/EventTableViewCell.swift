@@ -12,4 +12,7 @@ class EventTableViewCell: UITableViewCell {
 
     static let identifier = "EventHomeCell"
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
 }

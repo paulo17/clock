@@ -37,7 +37,6 @@
 		6B1A89521C20460100B72307 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A89481C20460100B72307 /* Lato-Regular.ttf */; };
 		6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */; };
 		6B3BF4111C1F01E40023EC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3BF40F1C1F01E40023EC48 /* Main.storyboard */; };
-		6B3BF4131C1F01E40023EC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3BF4121C1F01E40023EC48 /* Assets.xcassets */; };
 		6B3BF4161C1F01E40023EC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3BF4141C1F01E40023EC48 /* LaunchScreen.storyboard */; };
 		6B3BF4441C1F040D0023EC48 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3BF4381C1F03E20023EC48 /* Bolts.framework */; };
 		6B3BF4451C1F040D0023EC48 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3BF4391C1F03E20023EC48 /* Parse.framework */; };
@@ -62,6 +61,7 @@
 		6B5D4D3E1C20C0B300B7EB09 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */; };
 		6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */; };
 		6B8142631C21AA2B00D3E4AD /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8142621C21AA2B00D3E4AD /* Array.swift */; };
+		6B8142651C21ABB000D3E4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B8142641C21ABB000D3E4AD /* Assets.xcassets */; };
 		6BA81C281C20169200CF3880 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA81C271C20169200CF3880 /* Login.storyboard */; };
 		6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */; };
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
@@ -109,7 +109,6 @@
 		6B3BF4081C1F01E40023EC48 /* clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B3BF4101C1F01E40023EC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6B3BF4121C1F01E40023EC48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B3BF4151C1F01E40023EC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B3BF4171C1F01E40023EC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B3BF4381C1F03E20023EC48 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		6B8142621C21AA2B00D3E4AD /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		6B8142641C21ABB000D3E4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B93FB081C20A8E600258CB1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Pods/../build/Debug-iphoneos/FacebookSDK.framework"; sourceTree = "<group>"; };
 		6B93FB0A1C20AA9F00258CB1 /* clock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "clock-Bridging-Header.h"; path = "../../clock/clock-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B93FB0D1C20AAF900258CB1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 				6BAB9A441C1F3A35004D2408 /* Model */,
 				6BAB9A3D1C1F3A28004D2408 /* Controller */,
 				6B3BF40B1C1F01E40023EC48 /* AppDelegate.swift */,
-				6B3BF4121C1F01E40023EC48 /* Assets.xcassets */,
+				6B8142641C21ABB000D3E4AD /* Assets.xcassets */,
 				6B3BF4171C1F01E40023EC48 /* Info.plist */,
 			);
 			name = Clock;
@@ -465,12 +465,12 @@
 				6B1A894F1C20460100B72307 /* Lato-Italic.ttf in Resources */,
 				6B1A894D1C20460100B72307 /* Lato-Hairline.ttf in Resources */,
 				6B1A89501C20460100B72307 /* Lato-Light.ttf in Resources */,
+				6B8142651C21ABB000D3E4AD /* Assets.xcassets in Resources */,
 				6B1A894E1C20460100B72307 /* Lato-HairlineItalic.ttf in Resources */,
 				6BA81C281C20169200CF3880 /* Login.storyboard in Resources */,
 				6B1254D11C20AEBA00B10CFA /* FacebookSDKStrings.bundle in Resources */,
 				6B1A894C1C20460100B72307 /* Lato-BoldItalic.ttf in Resources */,
 				6B3BF4161C1F01E40023EC48 /* LaunchScreen.storyboard in Resources */,
-				6B3BF4131C1F01E40023EC48 /* Assets.xcassets in Resources */,
 				6B1A894B1C20460100B72307 /* Lato-Bold.ttf in Resources */,
 				6B1A89521C20460100B72307 /* Lato-Regular.ttf in Resources */,
 				6B1A89511C20460100B72307 /* Lato-LightItalic.ttf in Resources */,
