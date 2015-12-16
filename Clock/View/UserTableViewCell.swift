@@ -12,4 +12,8 @@ class UserTableViewCell: UITableViewCell {
 
     static let identifier = "UserSearchCell"
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var avatarImage: UIImageView!
+    
 }
