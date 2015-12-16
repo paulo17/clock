@@ -15,11 +15,13 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var usersTableView: UITableView!
     
     lazy var users = [PFUser]()
+    lazy var friends = [PFUser]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        searchBar.showsCancelButton = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,8 +54,25 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier(UserTableViewCell.identifier, forIndexPath: indexPath) as! UserTableViewCell
         
         cell.usernameLabel.text = users[indexPath.row].username
+        cell.accessoryType = .None
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! UserTableViewCell
+        let user = users[indexPath.row]
+        
+        cell.toggleAccessor()
+        
+        if !friends.contains(user) {
+            friends.append(user)
+        } else {
+            friends.removeObject(user)
+        }
     }
     
     // Mark: - Searchbar delegate
@@ -65,9 +84,9 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    // Mark: - Action methods
-    
-    @IBAction func cancelSearch(sender: AnyObject) {
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        
+        // todo send back friends array to event friend
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 

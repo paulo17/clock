@@ -16,4 +16,12 @@ class UserTableViewCell: UITableViewCell {
     
     @IBOutlet weak var avatarImage: UIImageView!
     
+    func toggleAccessor() {
+        if self.accessoryType == .Checkmark {
+            self.accessoryType = .None
+        } else {
+            self.accessoryType = .Checkmark
+        }
+    }
+    
 }

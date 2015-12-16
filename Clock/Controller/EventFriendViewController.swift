@@ -31,7 +31,13 @@ class EventFriendViewController: UIViewController {
         
         if let address = self.address, let location = self.coordonate {
             let event = Event(name: name, date: date, address: address, lat: location.lat, long: location.long)
+            
             EventSynchroniser.saveObject(event)
+            
+            // redirect to home view controller
+            if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeViewNav") {
+                redirect(from: self, to: homeViewController)
+            }
         }
     }
 
