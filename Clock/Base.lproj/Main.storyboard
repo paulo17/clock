@@ -23,6 +23,8 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -41,7 +43,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zmZ-Ti-Pm1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="von-px-lTc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="von-px-lTc">
                                 <rect key="frame" x="171" y="372" width="260" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Cnf-2h-1gz"/>
@@ -49,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="260" id="YNe-wb-P2c"/>
                                     <constraint firstAttribute="width" constant="262" id="hZK-dq-qUd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -593,7 +595,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-NQ-T54">
-                                <rect key="frame" x="83" y="112" width="475" height="45"/>
+                                <rect key="frame" x="63" y="171" width="475" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="8W8-OG-m1c"/>
                                     <constraint firstAttribute="width" constant="482" id="DRH-Fl-qBy"/>
@@ -615,10 +617,10 @@
                                 </variation>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-F6-IUF">
-                                <rect key="frame" x="172.5" y="298" width="255" height="65"/>
+                                <rect key="frame" x="63" y="367" width="475" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="1C6-oy-CpQ"/>
-                                    <constraint firstAttribute="width" constant="255" id="TBR-ZK-CRF"/>
+                                    <constraint firstAttribute="width" constant="260" id="TBR-ZK-CRF"/>
                                     <constraint firstAttribute="height" constant="65" id="WX9-4x-ypP"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="YQZ-Uh-xbf"/>
                                 </constraints>
@@ -629,19 +631,28 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="1C6-oy-CpQ"/>
+                                        <exclude reference="TBR-ZK-CRF"/>
                                         <exclude reference="YQZ-Uh-xbf"/>
                                     </mask>
                                 </variation>
                             </datePicker>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location icon" translatesAutoresizingMaskIntoConstraints="NO" id="sNw-5V-p8U">
-                                <rect key="frame" x="27" y="189" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X92-PZ-n9X">
+                                <rect key="frame" x="170" y="481" width="260" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="aDB-Jc-rV3"/>
-                                    <constraint firstAttribute="height" constant="30" id="wG4-8e-xEu"/>
+                                    <constraint firstAttribute="width" constant="260" id="MBw-iH-pzE"/>
+                                    <constraint firstAttribute="height" constant="45" id="g7W-k6-AXy"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <state key="normal" title="Invitez vos amis">
+                                    <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xyF-Wg-X8i" kind="show" identifier="inviteFriend" id="NzL-FK-QgO"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5e-3B-wRO">
-                                <rect key="frame" x="83" y="181" width="475" height="45"/>
+                                <rect key="frame" x="63" y="240" width="475" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="Yfj-dq-CtC"/>
@@ -664,56 +675,53 @@
                                     <action selector="autocompleteClicked:" destination="DjZ-zi-mh2" eventType="touchUpInside" id="jL2-g7-4yV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X92-PZ-n9X">
-                                <rect key="frame" x="170" y="481" width="260" height="45"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Renseigner votre rendez-vous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-jn-K5z">
+                                <rect key="frame" x="159" y="112" width="283" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="MBw-iH-pzE"/>
-                                    <constraint firstAttribute="height" constant="45" id="g7W-k6-AXy"/>
+                                    <constraint firstAttribute="width" constant="283" id="Wil-4Q-Xps"/>
+                                    <constraint firstAttribute="height" constant="21" id="kcg-lV-Fxk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                <state key="normal" title="Invitez vos amis">
-                                    <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xyF-Wg-X8i" kind="show" identifier="inviteFriend" id="NzL-FK-QgO"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="0Ih-dQ-OfN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0iQ-jn-K5z" secondAttribute="trailing" constant="138" id="0V5-f8-07t"/>
                             <constraint firstItem="UWI-F6-IUF" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="0Zs-Me-BUc"/>
                             <constraint firstAttribute="bottom" secondItem="QF9-lJ-7gf" secondAttribute="bottom" id="0ub-WJ-Goz"/>
                             <constraint firstItem="b5e-3B-wRO" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="28" id="2R5-Ky-jfI"/>
-                            <constraint firstItem="sNw-5V-p8U" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="7" id="3Ln-u9-dwc"/>
-                            <constraint firstItem="sNw-5V-p8U" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="32" id="55X-pd-jrj"/>
-                            <constraint firstItem="cuX-NQ-T54" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="63" id="642-ff-iJT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cuX-NQ-T54" secondAttribute="trailing" constant="42" id="4xx-sr-FLF"/>
+                            <constraint firstItem="cuX-NQ-T54" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="43" id="642-ff-iJT"/>
                             <constraint firstAttribute="trailing" secondItem="QF9-lJ-7gf" secondAttribute="trailing" id="7Ww-6d-zlM"/>
                             <constraint firstItem="QF9-lJ-7gf" firstAttribute="top" secondItem="0Lj-PV-d7N" secondAttribute="topMargin" id="CMc-AF-QHf"/>
                             <constraint firstItem="UWI-F6-IUF" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" constant="2.5" id="Cu8-uj-92Y"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="82" id="D0J-pC-Hmi"/>
+                            <constraint firstItem="0iQ-jn-K5z" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="48" id="D37-sV-t2F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UWI-F6-IUF" secondAttribute="trailing" constant="42" id="DNG-EO-fhq"/>
                             <constraint firstItem="wNR-S1-HGn" firstAttribute="top" secondItem="X92-PZ-n9X" secondAttribute="bottom" constant="25" id="GDV-nx-oDr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cuX-NQ-T54" secondAttribute="trailing" constant="22" id="Hzf-eR-93H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cuX-NQ-T54" secondAttribute="trailing" constant="42" id="Hzf-eR-93H"/>
                             <constraint firstItem="QF9-lJ-7gf" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="-64" id="IRY-1b-99W"/>
-                            <constraint firstItem="b5e-3B-wRO" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="63" id="Iqd-Er-gNH"/>
-                            <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="b5e-3B-wRO" secondAttribute="bottom" constant="72" id="J5x-Lv-3gS"/>
+                            <constraint firstItem="b5e-3B-wRO" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="43" id="Iqd-Er-gNH"/>
+                            <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="b5e-3B-wRO" secondAttribute="bottom" constant="82" id="J5x-Lv-3gS"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" constant="20.5" id="K38-Yx-hZY"/>
-                            <constraint firstItem="b5e-3B-wRO" firstAttribute="leading" secondItem="sNw-5V-p8U" secondAttribute="trailing" constant="26" id="NWS-6z-TST"/>
                             <constraint firstItem="b5e-3B-wRO" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" constant="20.5" id="OOn-Jo-A5x"/>
                             <constraint firstItem="QF9-lJ-7gf" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leading" id="Rll-ru-02r"/>
                             <constraint firstItem="X92-PZ-n9X" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="RtH-PE-rqy"/>
-                            <constraint firstItem="sNw-5V-p8U" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="125" id="Tv0-DO-3m4"/>
                             <constraint firstItem="b5e-3B-wRO" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="Wwt-Kl-aKO"/>
-                            <constraint firstItem="wNR-S1-HGn" firstAttribute="top" secondItem="sNw-5V-p8U" secondAttribute="bottom" constant="332" id="bDs-Mw-Cqs"/>
+                            <constraint firstItem="UWI-F6-IUF" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="43" id="csM-aO-rXn"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="leading" secondItem="0Lj-PV-d7N" secondAttribute="leadingMargin" constant="44" id="cwr-Rm-5Dl"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="38" id="fkV-OS-PKZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b5e-3B-wRO" secondAttribute="trailing" constant="22" id="gNe-mh-dDB"/>
-                            <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="48" id="i8n-VK-7GM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b5e-3B-wRO" secondAttribute="trailing" constant="42" id="gNe-mh-dDB"/>
+                            <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="107" id="i8n-VK-7GM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cuX-NQ-T54" secondAttribute="trailing" constant="44" id="kBE-Pq-rgn"/>
                             <constraint firstItem="X92-PZ-n9X" firstAttribute="top" secondItem="UWI-F6-IUF" secondAttribute="bottom" constant="90" id="mhR-Zq-B9s"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="oze-Zc-6lA"/>
+                            <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="0iQ-jn-K5z" secondAttribute="bottom" constant="38.5" id="qfy-WY-qQU"/>
                             <constraint firstItem="cuX-NQ-T54" firstAttribute="top" secondItem="9B8-DI-sNJ" secondAttribute="bottom" constant="79" id="ucs-Rg-lxw"/>
+                            <constraint firstItem="0iQ-jn-K5z" firstAttribute="centerX" secondItem="0Lj-PV-d7N" secondAttribute="centerX" id="vUv-Qy-tD2"/>
                             <constraint firstItem="UWI-F6-IUF" firstAttribute="top" secondItem="b5e-3B-wRO" secondAttribute="bottom" constant="78" id="yxL-is-mJp"/>
                             <constraint firstItem="b5e-3B-wRO" firstAttribute="top" secondItem="cuX-NQ-T54" secondAttribute="bottom" constant="24" id="zoN-61-mJe"/>
                         </constraints>
@@ -722,20 +730,21 @@
                                 <exclude reference="IRY-1b-99W"/>
                                 <exclude reference="0Ih-dQ-OfN"/>
                                 <exclude reference="D0J-pC-Hmi"/>
+                                <exclude reference="Hzf-eR-93H"/>
                                 <exclude reference="K38-Yx-hZY"/>
                                 <exclude reference="cwr-Rm-5Dl"/>
                                 <exclude reference="fkV-OS-PKZ"/>
+                                <exclude reference="i8n-VK-7GM"/>
                                 <exclude reference="kBE-Pq-rgn"/>
                                 <exclude reference="oze-Zc-6lA"/>
                                 <exclude reference="ucs-Rg-lxw"/>
-                                <exclude reference="Tv0-DO-3m4"/>
+                                <exclude reference="0V5-f8-07t"/>
                                 <exclude reference="2R5-Ky-jfI"/>
                                 <exclude reference="OOn-Jo-A5x"/>
                                 <exclude reference="Wwt-Kl-aKO"/>
                                 <exclude reference="Cu8-uj-92Y"/>
                                 <exclude reference="yxL-is-mJp"/>
                                 <exclude reference="mhR-Zq-B9s"/>
-                                <exclude reference="bDs-Mw-Cqs"/>
                             </mask>
                         </variation>
                     </view>
@@ -773,7 +782,7 @@
                                     <constraint firstAttribute="height" constant="45" id="JL5-Lj-MDa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                <state key="normal" title="Ajouter">
+                                <state key="normal" title="Ajouter vos amis">
                                     <color key="titleColor" red="0.0" green="0.61568627450000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1010,7 +1019,6 @@
         <image name="Back Button" width="8" height="12"/>
         <image name="Background" width="360" height="640"/>
         <image name="Home icon" width="24" height="24"/>
-        <image name="Location icon" width="14" height="20"/>
         <image name="New icon" width="25" height="25"/>
         <image name="Profile icon" width="25" height="25"/>
         <image name="User Photo" width="45" height="45"/>

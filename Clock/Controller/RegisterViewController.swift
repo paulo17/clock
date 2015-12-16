@@ -66,6 +66,28 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: - Textfield Delegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        lastnameTextField.resignFirstResponder()
+        firstnameTextField.resignFirstResponder()
+        usernameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        return true;
+    }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        lastnameTextField.resignFirstResponder()
+        firstnameTextField.resignFirstResponder()
+        usernameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if lastnameTextField.text != "" && firstnameTextField.text != "" && usernameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" {
             registerButton.backgroundColor = UIColorFromRGBA("FFFFFF", alpha: 1.0)

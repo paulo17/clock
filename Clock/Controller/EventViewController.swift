@@ -29,6 +29,8 @@ class EventViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: - Textfield Delegate
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
@@ -41,7 +43,7 @@ class EventViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    // Mark: - Action methods
+    // MARK: - Action methods
     
     @IBAction func autocompleteClicked(sender: AnyObject) {
         let autocompleteController = GMSAutocompleteViewController()
