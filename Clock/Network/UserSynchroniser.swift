@@ -10,7 +10,7 @@ import Parse
 
 class UserSynchroniser {
     
-    static func getUserByName(username: String, completionHandler: (users: [PFUser]?, error: NSError?) -> ()) {
+    static func getUserByName(username: String, completionHandler: (users: [PFUser]?, error: NSError?) -> Void) {
         
         if let query = PFUser.query() {
             query.whereKey("username", containsString: username.lowercaseString)
@@ -35,6 +35,26 @@ class UserSynchroniser {
             
         }
         
+    }
+    
+    static func getAllUser(completionHandler: (users: [PFUser]?, error: NSError?) -> Void) {
+        
+        if let query = PFUser.query() {
+            query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+                if error == nil {
+                    
+                    if let objects = objects {
+                        var users = [PFUser]()
+                        
+                        for object in objects {
+                            users.append(object as! PFUser)
+                        }
+                        
+                        completionHandler(users: users, error: nil)
+                    }
+                }
+            })
+        }
     }
     
 }

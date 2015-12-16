@@ -32,6 +32,15 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
         searchBar.delegate = self
         searchBar.showsCancelButton = false
         UINavigationBar.appearance().barTintColor = UIColorFromRGBA("FFFFFF")
+        
+        // fetch all user by default
+        UserSynchroniser.getAllUser { (users, error) -> Void in
+            if error == nil {
+                if let users = users {
+                    self.refreshUsersData(users: users)
+                }
+            }
+        }
     }
     
     deinit {
@@ -44,14 +53,16 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
         UserSynchroniser.getUserByName(username) { (fetchedUsers, error) -> () in
             if error == nil {
                 if let users = fetchedUsers {
-
-                    self.users = [PFUser]()
-                    self.users += users
-                    self.usersTableView.reloadData()
-                    
+                    self.refreshUsersData(users: users)
                 }
             }
         }
+    }
+    
+    func refreshUsersData(users fetchedUser: [PFUser]) {
+        self.users = [PFUser]()
+        self.users += fetchedUser
+        self.usersTableView.reloadData()
     }
     
     // MARK: - Table View data source & Delegate

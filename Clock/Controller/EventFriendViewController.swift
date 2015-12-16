@@ -19,8 +19,6 @@ class EventFriendViewController: UIViewController, SearchFriendDelegate {
         super.viewDidLoad()
         
         navigationItem.title = name
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
