@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //GMSServices.provideAPIKey(NSBundle.mainBundle().objectForInfoDictionaryKey("Google Api Key") as! String)
         GMSServices.provideAPIKey("AIzaSyB5CFNfES73KgHOJKDDYt5a8ZtWnHSF0UE")
         
+        UINavigationBar.appearance().barTintColor = UIColorFromRGBA("006195")
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
         checkLoginUser()
         
         return true

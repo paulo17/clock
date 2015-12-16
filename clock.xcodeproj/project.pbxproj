@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0312661C21752500D48AE4 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0312651C21752500D48AE4 /* UserTableViewCell.swift */; };
+		6B0312681C21758E00D48AE4 /* UserSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */; };
 		6B032D281C20561800983F7D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B032D271C20561800983F7D /* CustomTextField.swift */; };
 		6B1254D01C20AEBA00B10CFA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1254C41C20AEBA00B10CFA /* Bolts.framework */; };
 		6B1254D11C20AEBA00B10CFA /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B1254C51C20AEBA00B10CFA /* FacebookSDKStrings.bundle */; };
@@ -67,11 +69,15 @@
 		6BC670E91C2024CE001CC579 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670E81C2024CE001CC579 /* Alert.swift */; };
 		6BC670EB1C20288E001CC579 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670EA1C20288E001CC579 /* Event.swift */; };
 		6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC670F11C202EE0001CC579 /* EventViewController.swift */; };
+		6BCD81E11C215C1E002035FA /* EventFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD81E01C215C1E002035FA /* EventFriendViewController.swift */; };
+		6BCD81E41C216CC4002035FA /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD81E31C216CC4002035FA /* SearchFriendViewController.swift */; };
 		6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE88EA01C2010C300427E57 /* HomeViewController.swift */; };
 		E46331DDA4591283FCBB8D60 /* Pods_clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A8EE7798AB4B103D387937 /* Pods_clock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0312651C21752500D48AE4 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSynchroniser.swift; sourceTree = "<group>"; };
 		6B032D271C20561800983F7D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6B1254C41C20AEBA00B10CFA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6B1254C51C20AEBA00B10CFA /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		6BC670E81C2024CE001CC579 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		6BC670EA1C20288E001CC579 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		6BC670F11C202EE0001CC579 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		6BCD81E01C215C1E002035FA /* EventFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFriendViewController.swift; sourceTree = "<group>"; };
+		6BCD81E31C216CC4002035FA /* SearchFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		6BE88EA01C2010C300427E57 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8DFDE6C678C0114A0AE13F52 /* Pods-clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clock/Pods-clock.debug.xcconfig"; sourceTree = "<group>"; };
 		95A8EE7798AB4B103D387937 /* Pods_clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */,
+				6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -298,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */,
+				6B0312651C21752500D48AE4 /* UserTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -305,13 +315,12 @@
 		6BAB9A3D1C1F3A28004D2408 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6BCD81E21C216CA5002035FA /* Event */,
 				6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */,
 				6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */,
 				6BE88EA01C2010C300427E57 /* HomeViewController.swift */,
-				6BC670F11C202EE0001CC579 /* EventViewController.swift */,
 				6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */,
 				6B4CDE3F1C206D82000AB56E /* NavigationController.swift */,
-				6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */,
 			);
 			name = Controller;
 			path = Clock/Controller;
@@ -363,6 +372,17 @@
 			name = Network;
 			path = Clock/Network;
 			sourceTree = SOURCE_ROOT;
+		};
+		6BCD81E21C216CA5002035FA /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				6BC670F11C202EE0001CC579 /* EventViewController.swift */,
+				6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */,
+				6BCD81E01C215C1E002035FA /* EventFriendViewController.swift */,
+				6BCD81E31C216CC4002035FA /* SearchFriendViewController.swift */,
+			);
+			name = Event;
+			sourceTree = "<group>";
 		};
 		8BC5798C66C8B6A0BFA21757 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -513,11 +533,13 @@
 			files = (
 				6B5D4D3E1C20C0B300B7EB09 /* EventTableViewCell.swift in Sources */,
 				6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */,
+				6B0312661C21752500D48AE4 /* UserTableViewCell.swift in Sources */,
 				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
 				6B4CDE431C208C9E000AB56E /* EventSynchroniser.swift in Sources */,
 				6BC670F21C202EE0001CC579 /* EventViewController.swift in Sources */,
 				6B4CDE3E1C206D05000AB56E /* AccountViewController.swift in Sources */,
 				6B1A893B1C20427200B72307 /* Font.swift in Sources */,
+				6BCD81E11C215C1E002035FA /* EventFriendViewController.swift in Sources */,
 				6BC670EB1C20288E001CC579 /* Event.swift in Sources */,
 				6B4CDE401C206D82000AB56E /* NavigationController.swift in Sources */,
 				6B1A893D1C2042B800B72307 /* UIColorFromRGBA.swift in Sources */,
@@ -525,7 +547,9 @@
 				6B1A89241C203F0E00B72307 /* ParseModelProtocol.swift in Sources */,
 				6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */,
 				6BBE2E841C1F72760085B2D3 /* User.swift in Sources */,
+				6B0312681C21758E00D48AE4 /* UserSynchroniser.swift in Sources */,
 				6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */,
+				6BCD81E41C216CC4002035FA /* SearchFriendViewController.swift in Sources */,
 				6BC670E91C2024CE001CC579 /* Alert.swift in Sources */,
 				6B1A89221C203D4C00B72307 /* NetworkOperation.swift in Sources */,
 				6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */,

@@ -28,6 +28,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.edgesForExtendedLayout = UIRectEdge.None // All
     }
     
     override func didReceiveMemoryWarning() {

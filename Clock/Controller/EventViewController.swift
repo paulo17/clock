@@ -21,7 +21,8 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        placeButton.layer.cornerRadius = 0.5
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,13 +39,20 @@ class EventViewController: UIViewController {
         self.presentViewController(autocompleteController, animated: true, completion: nil)
     }
     
-    @IBAction func addEvent(sender: AnyObject) {
+    // MARK: - Segue handling
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if let address = self.address, let location = self.coordonate {
-            let event = Event(name: nameTextField.text!, date: datePicker.date, address: address, lat: location.lat, long: location.long)
-            EventSynchroniser.saveObject(event)
-            
+        if let segueIdentifier = segue.identifier {
+            if segueIdentifier == "inviteFriend" {
+                let eventFriendViewController = segue.destinationViewController as! EventFriendViewController
+                eventFriendViewController.name = nameTextField.text!
+                eventFriendViewController.date = datePicker.date
+                eventFriendViewController.address = address
+                eventFriendViewController.coordonate = coordonate
+            }
         }
+        
     }
 }
 
