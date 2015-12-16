@@ -13,7 +13,7 @@ class UserSynchroniser {
     static func getUserByName(username: String, completionHandler: (users: [PFUser]?, error: NSError?) -> ()) {
         
         if let query = PFUser.query() {
-            query.whereKey("username", containsString: username)
+            query.whereKey("username", containsString: username.lowercaseString)
             
             
             query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in

@@ -847,10 +847,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fn5-c5-uxO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="r4k-1H-mqr">
-                                <rect key="frame" x="0.0" y="20" width="523" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-qF-VE1">
                                 <rect key="frame" x="523" y="20" width="77" height="44"/>
                                 <constraints>
@@ -876,7 +872,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-Kg-1iV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Photo" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-Kg-1iV">
                                                     <rect key="frame" x="16" y="8" width="43" height="43.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZI-GM-7IC">
@@ -909,6 +905,10 @@
                                     <outlet property="delegate" destination="MDg-kV-7L2" id="ViA-cf-ZPF"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="r4k-1H-mqr">
+                                <rect key="frame" x="0.0" y="20" width="523" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1006,6 +1006,7 @@
         <image name="Home icon" width="24" height="24"/>
         <image name="New icon" width="25" height="25"/>
         <image name="Profile icon" width="25" height="25"/>
+        <image name="User Photo" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rjT-tM-xvs"/>
