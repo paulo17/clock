@@ -16,6 +16,7 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
     var date: NSDate!
     var address: String!
     var coordonate: (lat: Double, long: Double)!
+    var loose: String!
     
     lazy var users = [PFUser]()
     
@@ -41,7 +42,7 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
         
         if let address = self.address, let location = self.coordonate {
             
-            let event = Event(name: name, date: date, address: address, lat: location.lat, long: location.long)
+            let event = Event(name: name, date: date, address: address, lat: location.lat, long: location.long, loose: loose)
             
             let guests = Guest.instanciateGuests(event, users: self.users)
             

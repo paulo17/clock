@@ -2,6 +2,6 @@
 
 import Cocoa
 
-var str = "Hello, playground"
+var str = "Pello, playground"
 
 str.characters.first

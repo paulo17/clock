@@ -84,10 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-clock/Alamofire.framework"
-  install_framework "Pods-clock/SwiftyJSON.framework"
+  install_framework "Pods-clock/AFDateHelper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-clock/Alamofire.framework"
-  install_framework "Pods-clock/SwiftyJSON.framework"
+  install_framework "Pods-clock/AFDateHelper.framework"
 fi

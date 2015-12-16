@@ -15,6 +15,7 @@ class EventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var placeButton: UIButton!
+    @IBOutlet weak var looseTextField: UITextField!
     
     var address: String!
     var coordonate: (lat: Double, long: Double)!
@@ -63,6 +64,7 @@ class EventViewController: UIViewController, UITextFieldDelegate {
                 eventFriendViewController.date = datePicker.date
                 eventFriendViewController.address = address
                 eventFriendViewController.coordonate = coordonate
+                eventFriendViewController.loose = looseTextField.text!
             }
         }
         

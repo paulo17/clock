@@ -51,7 +51,12 @@ class EventSynchroniser {
                         
                         for object in objects {
                             
-                            let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Double, long: object["long"] as! Double)
+                            var loose = ""
+                            if let l = object["loose"] {
+                                loose = l as! String
+                            }
+                            
+                            let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Double, long: object["long"] as! Double, loose: loose)
                             events.append(event)
                             
                         }
