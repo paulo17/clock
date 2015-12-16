@@ -113,8 +113,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBAction methods
     
     @IBAction func callLoginUser(sender: UIButton) {
-        if let email = emailTextField.text,
-            let password = passwordTextField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text {
                 loginUser(email, password: password)
         }
     }

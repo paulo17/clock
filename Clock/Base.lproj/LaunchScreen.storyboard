@@ -2,7 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -19,14 +28,53 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="8z0-vy-jAV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOCK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqN-wK-Ru6">
+                                <rect key="frame" x="188" y="332" width="225" height="48"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ne soyez pas en retard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-Wy-Rmc">
+                                <rect key="frame" x="188" y="388" width="225" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo blanc" translatesAutoresizingMaskIntoConstraints="NO" id="mvY-XA-Zl1">
+                                <rect key="frame" x="154" y="172" width="293" height="152"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8z0-vy-jAV" secondAttribute="bottom" id="3dQ-kF-ZnD"/>
-                            <constraint firstItem="8z0-vy-jAV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="KqK-e6-quX"/>
-                            <constraint firstItem="8z0-vy-jAV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NjD-1S-3Xo"/>
-                            <constraint firstAttribute="trailing" secondItem="8z0-vy-jAV" secondAttribute="trailing" id="vDB-Xt-2cn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dqN-wK-Ru6" secondAttribute="trailing" constant="167" id="56c-j1-6ag"/>
+                            <constraint firstItem="dqN-wK-Ru6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="168" id="57G-3k-XCl"/>
+                            <constraint firstItem="dqN-wK-Ru6" firstAttribute="top" secondItem="mvY-XA-Zl1" secondAttribute="bottom" constant="8" id="7zx-I0-yN7"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="OwW-Wy-Rmc" secondAttribute="bottom" constant="188" id="92e-Kh-JZG"/>
+                            <constraint firstItem="OwW-Wy-Rmc" firstAttribute="top" secondItem="dqN-wK-Ru6" secondAttribute="bottom" constant="8" id="CyM-cE-4n8"/>
+                            <constraint firstItem="mvY-XA-Zl1" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="152" id="Ia2-MK-xaK"/>
+                            <constraint firstItem="OwW-Wy-Rmc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="168" id="O9A-L9-cUn"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8z0-vy-jAV" secondAttribute="bottom" id="SLt-Pu-VXp"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8z0-vy-jAV" secondAttribute="bottom" id="UKX-2e-Xra"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8z0-vy-jAV" secondAttribute="bottom" id="WlU-QL-joR"/>
+                            <constraint firstAttribute="trailing" secondItem="8z0-vy-jAV" secondAttribute="trailing" id="XTj-Kf-qaS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mvY-XA-Zl1" secondAttribute="trailing" constant="133" id="bT3-VU-f1F"/>
+                            <constraint firstItem="8z0-vy-jAV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cTT-mT-F2B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OwW-Wy-Rmc" secondAttribute="trailing" constant="167" id="dKO-DQ-AHE"/>
+                            <constraint firstItem="8z0-vy-jAV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dtu-85-lhH"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8z0-vy-jAV" secondAttribute="bottom" id="dxg-QD-svb"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8z0-vy-jAV" secondAttribute="bottom" id="ee9-81-APE"/>
+                            <constraint firstItem="mvY-XA-Zl1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nP0-c9-hji"/>
+                            <constraint firstItem="mvY-XA-Zl1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="134" id="zYr-Eu-qVm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nP0-c9-hji"/>
+                                <exclude reference="SLt-Pu-VXp"/>
+                                <exclude reference="UKX-2e-Xra"/>
+                                <exclude reference="dxg-QD-svb"/>
+                                <exclude reference="ee9-81-APE"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,5 +84,6 @@
     </scenes>
     <resources>
         <image name="Background" width="360" height="640"/>
+        <image name="Logo blanc" width="152" height="152"/>
     </resources>
 </document>

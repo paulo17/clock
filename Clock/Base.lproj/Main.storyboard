@@ -12,8 +12,11 @@
         <mutableArray key="Lato-Light.ttf">
             <string>Lato-Light</string>
             <string>Lato-Light</string>
+            <string>Lato-Light</string>
         </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
@@ -517,7 +520,7 @@
                                         <connections>
                                             <outlet property="addressLabel" destination="6nk-nf-3gE" id="yme-fU-lhJ"/>
                                             <outlet property="dateLabel" destination="rOb-15-oHL" id="7bh-z2-brm"/>
-                                            <segue destination="Zlk-5A-gxd" kind="show" id="rjT-tM-xvs">
+                                            <segue destination="Zlk-5A-gxd" kind="show" identifier="EventDetail" id="rjT-tM-xvs">
                                                 <segue key="commit" inheritsFrom="parent" id="AGg-lq-Y9b"/>
                                                 <segue key="preview" inheritsFrom="commit" id="R03-UC-jXe"/>
                                             </segue>
@@ -958,10 +961,10 @@
             </objects>
             <point key="canvasLocation" x="4107" y="-1087"/>
         </scene>
-        <!--View Controller-->
+        <!--Event Detail View Controller-->
         <scene sceneID="iP2-IR-hch">
             <objects>
-                <viewController id="Zlk-5A-gxd" sceneMemberID="viewController">
+                <viewController id="Zlk-5A-gxd" customClass="EventDetailViewController" customModule="clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3ZB-Yp-yZU"/>
                         <viewControllerLayoutGuide type="bottom" id="MP2-vl-B4L"/>
@@ -969,8 +972,71 @@
                     <view key="view" contentMode="scaleToFill" id="67F-PX-TO4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yWE-cd-cl0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café de Flore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mE-fS-EV9">
+                                <rect key="frame" x="48" y="230" width="504" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le dernier arrivé paye sa tournée !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEd-t2-itU">
+                                <rect key="frame" x="48" y="318" width="504" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBu-mz-bQu">
+                                <rect key="frame" x="48" y="114" width="504" height="108"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="90"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uEd-t2-itU" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" constant="28" id="Eiw-sW-sAQ"/>
+                            <constraint firstItem="3mE-fS-EV9" firstAttribute="top" secondItem="pBu-mz-bQu" secondAttribute="bottom" constant="15" id="Erj-Jz-n38"/>
+                            <constraint firstItem="pBu-mz-bQu" firstAttribute="top" secondItem="3ZB-Yp-yZU" secondAttribute="bottom" constant="50" id="G2i-rt-eMR"/>
+                            <constraint firstItem="pBu-mz-bQu" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" constant="28" id="GjE-bu-gky"/>
+                            <constraint firstAttribute="trailing" secondItem="yWE-cd-cl0" secondAttribute="trailing" id="Qhq-Av-gYw"/>
+                            <constraint firstItem="uEd-t2-itU" firstAttribute="top" secondItem="3mE-fS-EV9" secondAttribute="bottom" constant="64" id="RdG-MJ-bhc"/>
+                            <constraint firstItem="yWE-cd-cl0" firstAttribute="top" secondItem="67F-PX-TO4" secondAttribute="top" id="WI1-fK-aqi"/>
+                            <constraint firstAttribute="bottom" secondItem="yWE-cd-cl0" secondAttribute="bottom" id="XH5-XR-5i7"/>
+                            <constraint firstItem="3mE-fS-EV9" firstAttribute="top" secondItem="pBu-mz-bQu" secondAttribute="bottom" constant="8" id="XPD-RN-0jB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEd-t2-itU" secondAttribute="trailing" constant="149" id="Y5o-07-Iub"/>
+                            <constraint firstItem="yWE-cd-cl0" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leading" id="YLK-4K-yb2"/>
+                            <constraint firstItem="uEd-t2-itU" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" constant="150" id="fye-rt-hdY"/>
+                            <constraint firstItem="MP2-vl-B4L" firstAttribute="top" secondItem="uEd-t2-itU" secondAttribute="bottom" constant="236" id="hYF-SI-PHa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3mE-fS-EV9" secondAttribute="trailing" constant="28" id="iON-zr-kih"/>
+                            <constraint firstItem="uEd-t2-itU" firstAttribute="top" secondItem="3mE-fS-EV9" secondAttribute="bottom" constant="22" id="kbQ-Db-hG8"/>
+                            <constraint firstItem="MP2-vl-B4L" firstAttribute="top" secondItem="3mE-fS-EV9" secondAttribute="bottom" constant="284" id="ssy-Oo-aLM"/>
+                            <constraint firstItem="3mE-fS-EV9" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" constant="28" id="wbR-s4-5Tq"/>
+                            <constraint firstItem="uEd-t2-itU" firstAttribute="top" secondItem="3mE-fS-EV9" secondAttribute="bottom" constant="18" id="xYK-8x-x7X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEd-t2-itU" secondAttribute="trailing" constant="28" id="z73-2J-Tpn"/>
+                            <constraint firstItem="MP2-vl-B4L" firstAttribute="top" secondItem="uEd-t2-itU" secondAttribute="bottom" constant="232" id="zph-ew-G5N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pBu-mz-bQu" secondAttribute="trailing" constant="28" id="zx8-5D-ZkH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Erj-Jz-n38"/>
+                                <exclude reference="Y5o-07-Iub"/>
+                                <exclude reference="fye-rt-hdY"/>
+                                <exclude reference="kbQ-Db-hG8"/>
+                                <exclude reference="xYK-8x-x7X"/>
+                                <exclude reference="hYF-SI-PHa"/>
+                                <exclude reference="ssy-Oo-aLM"/>
+                                <exclude reference="zph-ew-G5N"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="3mE-fS-EV9" id="rO8-uQ-B25"/>
+                        <outlet property="dateLabel" destination="pBu-mz-bQu" id="hNF-R4-Yu8"/>
+                        <outlet property="looseLabel" destination="uEd-t2-itU" id="Crc-d0-DJ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6Y-ae-3vL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

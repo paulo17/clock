@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var eventTableView: UITableView!
     
     lazy var events = [Event]()
@@ -25,14 +25,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.eventTableView.reloadData()
             }
         }
-    
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
+    
     @IBAction func userLogout(sender: AnyObject) {
         PFUser.logOut()
         if let loginView = self.storyboard?.instantiateViewControllerWithIdentifier("loginView") {
@@ -60,14 +60,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "EventDetail" {
+            
+            if let indexPath = eventTableView.indexPathForSelectedRow {
+                let event = events[indexPath.row]
+                let eventDetailViewController = segue.destinationViewController as! EventDetailViewController
+                eventDetailViewController.event = event
+            }
+            
+        }
     }
-
-
+    
 }
