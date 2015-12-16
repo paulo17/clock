@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AFDateHelper
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -41,12 +42,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCellWithIdentifier(EventTableViewCell.identifier, forIndexPath: indexPath) as! EventTableViewCell
         
         cell.addressLabel.text = events[indexPath.row].address
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
-        let dateString = dateFormatter.stringFromDate(events[indexPath.row].date)
-        
-        cell.dateLabel.text = dateString
+        cell.dateLabel.text = events[indexPath.row].date.toString(format: .Custom("HH:mm"))
         
         return cell
     }

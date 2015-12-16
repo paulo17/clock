@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AFDateHelper
 
 class EventDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -28,18 +29,9 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
             navigationItem.title = "Evenement sans nom"
         }
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
-        
-        let dateString = dateFormatter.stringFromDate(event.date)
-        
-        dateFormatter.dateFormat = "d m y"
-        let fullDate = dateFormatter.stringFromDate(event.date)
-        
-        
-        dateLabel.text = dateString
+        dateLabel.text = event.date.toString(format: .Custom("HH:mm"))
         addressLabel.text = event.address
-        completeDate.text = fullDate
+        completeDate.text = event.date.toString(format: .ISO8601(ISO8601Format.Date))
         
     }
     
