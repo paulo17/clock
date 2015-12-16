@@ -10,6 +10,8 @@
 		6B0312661C21752500D48AE4 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0312651C21752500D48AE4 /* UserTableViewCell.swift */; };
 		6B0312681C21758E00D48AE4 /* UserSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */; };
 		6B032D281C20561800983F7D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B032D271C20561800983F7D /* CustomTextField.swift */; };
+		6B0C46281C220D610059D9B3 /* GuestSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C46271C220D610059D9B3 /* GuestSynchroniser.swift */; };
+		6B0C462A1C220DEF0059D9B3 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C46291C220DEF0059D9B3 /* Guest.swift */; };
 		6B1254D01C20AEBA00B10CFA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1254C41C20AEBA00B10CFA /* Bolts.framework */; };
 		6B1254D11C20AEBA00B10CFA /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B1254C51C20AEBA00B10CFA /* FacebookSDKStrings.bundle */; };
 		6B1254D21C20AEBA00B10CFA /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1254C61C20AEBA00B10CFA /* FBAudienceNetwork.framework */; };
@@ -62,6 +64,7 @@
 		6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */; };
 		6B8142631C21AA2B00D3E4AD /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8142621C21AA2B00D3E4AD /* Array.swift */; };
 		6B8142651C21ABB000D3E4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B8142641C21ABB000D3E4AD /* Assets.xcassets */; };
+		6B8142671C22050200D3E4AD /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8142661C22050200D3E4AD /* FriendCollectionViewCell.swift */; };
 		6BA81C281C20169200CF3880 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA81C271C20169200CF3880 /* Login.storyboard */; };
 		6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */; };
 		6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */; };
@@ -80,6 +83,9 @@
 		6B0312651C21752500D48AE4 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSynchroniser.swift; sourceTree = "<group>"; };
 		6B032D271C20561800983F7D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		6B0C46251C22073D0059D9B3 /* try.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = try.playground; sourceTree = "<group>"; };
+		6B0C46271C220D610059D9B3 /* GuestSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSynchroniser.swift; sourceTree = "<group>"; };
+		6B0C46291C220DEF0059D9B3 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		6B1254C41C20AEBA00B10CFA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6B1254C51C20AEBA00B10CFA /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		6B1254C61C20AEBA00B10CFA /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 		6B5D4D3F1C20C18700B7EB09 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		6B8142621C21AA2B00D3E4AD /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		6B8142641C21ABB000D3E4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B8142661C22050200D3E4AD /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B93FB081C20A8E600258CB1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Pods/../build/Debug-iphoneos/FacebookSDK.framework"; sourceTree = "<group>"; };
 		6B93FB0A1C20AA9F00258CB1 /* clock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "clock-Bridging-Header.h"; path = "../../clock/clock-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B93FB0D1C20AAF900258CB1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
@@ -205,6 +212,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6B0C46261C2208C20059D9B3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */,
+				6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		6B1A893E1C20460100B72307 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +261,7 @@
 		6B3BF40A1C1F01E40023EC48 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				6B8142681C22070F00D3E4AD /* Playground */,
 				6B1A893E1C20460100B72307 /* Fonts */,
 				6BC670EC1C202A11001CC579 /* Network */,
 				6BC670E51C20249B001CC579 /* Helper */,
@@ -301,6 +318,7 @@
 			children = (
 				6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */,
 				6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */,
+				6B0C46271C220D610059D9B3 /* GuestSynchroniser.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -310,16 +328,25 @@
 			children = (
 				6B5D4D3D1C20C0B300B7EB09 /* EventTableViewCell.swift */,
 				6B0312651C21752500D48AE4 /* UserTableViewCell.swift */,
+				6B8142661C22050200D3E4AD /* FriendCollectionViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		6B8142681C22070F00D3E4AD /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C46251C22073D0059D9B3 /* try.playground */,
+			);
+			name = Playground;
+			path = Clock/Playground;
+			sourceTree = SOURCE_ROOT;
+		};
 		6BAB9A3D1C1F3A28004D2408 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B0C46261C2208C20059D9B3 /* Login */,
 				6BCD81E21C216CA5002035FA /* Event */,
-				6BAB9A3E1C1F3A28004D2408 /* LoginViewController.swift */,
-				6BAB9A3F1C1F3A28004D2408 /* RegisterViewController.swift */,
 				6BE88EA01C2010C300427E57 /* HomeViewController.swift */,
 				6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */,
 				6B4CDE3F1C206D82000AB56E /* NavigationController.swift */,
@@ -334,6 +361,7 @@
 				6B1A89231C203F0E00B72307 /* ParseModelProtocol.swift */,
 				6BBE2E831C1F72760085B2D3 /* User.swift */,
 				6BC670EA1C20288E001CC579 /* Event.swift */,
+				6B0C46291C220DEF0059D9B3 /* Guest.swift */,
 			);
 			name = Model;
 			path = Clock/Model;
@@ -536,6 +564,7 @@
 			files = (
 				6B5D4D3E1C20C0B300B7EB09 /* EventTableViewCell.swift in Sources */,
 				6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */,
+				6B8142671C22050200D3E4AD /* FriendCollectionViewCell.swift in Sources */,
 				6B0312661C21752500D48AE4 /* UserTableViewCell.swift in Sources */,
 				6BC670E71C20249B001CC579 /* Redirect.swift in Sources */,
 				6B4CDE431C208C9E000AB56E /* EventSynchroniser.swift in Sources */,
@@ -553,7 +582,9 @@
 				6B0312681C21758E00D48AE4 /* UserSynchroniser.swift in Sources */,
 				6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */,
 				6BCD81E41C216CC4002035FA /* SearchFriendViewController.swift in Sources */,
+				6B0C462A1C220DEF0059D9B3 /* Guest.swift in Sources */,
 				6BC670E91C2024CE001CC579 /* Alert.swift in Sources */,
+				6B0C46281C220D610059D9B3 /* GuestSynchroniser.swift in Sources */,
 				6B1A89221C203D4C00B72307 /* NetworkOperation.swift in Sources */,
 				6B8142631C21AA2B00D3E4AD /* Array.swift in Sources */,
 				6BE88EA11C2010C300427E57 /* HomeViewController.swift in Sources */,

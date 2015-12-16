@@ -6,7 +6,7 @@
 //  Copyright © 2015 paulboiseau. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class User: ParseModelProcotol {
     
@@ -24,5 +24,8 @@ class User: ParseModelProcotol {
         self.lastname = lastname
     }
     
-  
+    func modelToPFObject() -> PFObject {
+        return PFObject(className: User.parseClassName)
+    }
+    
 }

@@ -7,10 +7,12 @@
 //
 
 
-import UIKit
+import Parse
 
 protocol ParseModelProcotol {
     
     static var parseClassName: String { get }
+    
+    func modelToPFObject() -> PFObject
 
 }

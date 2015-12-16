@@ -8,12 +8,16 @@
 
 import Parse
 
-class EventFriendViewController: UIViewController, SearchFriendDelegate {
+class EventFriendViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SearchFriendDelegate {
+    
+    @IBOutlet weak var friendCollection: UICollectionView!
     
     var name: String!
     var date: NSDate!
     var address: String!
     var coordonate: (lat: Double, long: Double)!
+    
+    lazy var users = [PFUser]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +29,24 @@ class EventFriendViewController: UIViewController, SearchFriendDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    // Mark: - Action methods
+    
+    func getFriends(value: [PFUser], sender: AnyObject) {
+        users += value
+        friendCollection.reloadData()
+    }
+    
+    // MARK: - Action methods
 
     @IBAction func addEvent(sender: AnyObject) {
         
         if let address = self.address, let location = self.coordonate {
+            
             let event = Event(name: name, date: date, address: address, lat: location.lat, long: location.long)
             
+            let guests = Guest.instanciateGuests(event, users: self.users)
+            
             EventSynchroniser.saveObject(event)
+            GuestSynchroniser.saveObjects(guests)
             
             // redirect to home view controller
             if let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeViewNav") {
@@ -41,14 +55,30 @@ class EventFriendViewController: UIViewController, SearchFriendDelegate {
         }
     }
     
+    // MARK: - CollectionView DataSource & Delegate
     
-    func getFriends(value: [PFUser], sender: AnyObject) {
-        print(value)
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return users.count
     }
-
-    @IBAction func inviteFriend(sender: AnyObject) {
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(FriendCollectionViewCell.identifier, forIndexPath: indexPath) as! FriendCollectionViewCell
         
+        let user = users[indexPath.row]
+    
+        var shortName = "\(indexPath.row)" // TODO: use username
+        
+        if let firstname = user["firstname"] as? String, let lastname = user["lastname"] as? String {
+            shortName = "\(firstname.characters.first)\(lastname.characters.first)"
+        }
+    
+        cell.shortNameLabel.text = shortName
+        cell.viewWrapper.layer.cornerRadius = 30
+        
+        return cell
     }
+    
+    // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SearchFriend" {

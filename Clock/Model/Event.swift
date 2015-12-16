@@ -6,10 +6,10 @@
 //  Copyright © 2015 paulboiseau. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class Event: ParseModelProcotol {
-
+    
     static var parseClassName = "Event"
     
     let name: String
@@ -24,6 +24,19 @@ class Event: ParseModelProcotol {
         self.address = address
         self.lat = lat
         self.long = long
+    }
+    
+    func modelToPFObject() -> PFObject {
+        let PFEvent = PFObject(className: Event.parseClassName)
+        
+        PFEvent["name"] = name
+        PFEvent["date"] = date
+        PFEvent["address"] = address
+        PFEvent["lat"] = lat
+        PFEvent["long"] = long
+        PFEvent["user"] = PFUser.currentUser()
+        
+        return PFEvent
     }
     
 }
