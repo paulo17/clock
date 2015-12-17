@@ -26,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColorFromRGBA("006195")
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        UITabBar.appearance().barTintColor = UIColor.whiteColor()
-        
         UIStatusBarStyle.LightContent
         
         checkLoginUser()

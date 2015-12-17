@@ -21,5 +21,5 @@ class Checkin: ParseModelProcotol {
         self.coordonate = coordonate
         self.status = status
     }
-
+    
 }

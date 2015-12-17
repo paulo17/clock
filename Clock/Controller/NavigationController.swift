@@ -9,13 +9,10 @@
 import UIKit
 
 class NavigationController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        UITabBar.appearance().barTintColor = UIColor.whiteColor()
     }
     
 }

@@ -35,6 +35,7 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -687,28 +688,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="QF9-lJ-7gf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-NQ-T54">
-                                <rect key="frame" x="63" y="171" width="475" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="8W8-OG-m1c"/>
-                                    <constraint firstAttribute="width" constant="482" id="DRH-Fl-qBy"/>
-                                    <constraint firstAttribute="height" constant="45" id="GAp-d2-YbW"/>
-                                    <constraint firstAttribute="width" constant="280" id="KfW-cv-FBM"/>
-                                    <constraint firstAttribute="height" constant="30" id="mZD-JN-WlY"/>
-                                    <constraint firstAttribute="width" constant="400" id="meL-KD-k7f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DRH-Fl-qBy"/>
-                                        <exclude reference="GAp-d2-YbW"/>
-                                        <exclude reference="KfW-cv-FBM"/>
-                                        <exclude reference="mZD-JN-WlY"/>
-                                        <exclude reference="meL-KD-k7f"/>
-                                    </mask>
-                                </variation>
-                            </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-F6-IUF">
                                 <rect key="frame" x="63" y="376" width="475" height="65"/>
                                 <constraints>
@@ -763,7 +742,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Si je suis en retard, je dois ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CG-wp-udf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Si je suis en retard, je dois ..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CG-wp-udf">
                                 <rect key="frame" x="63" y="306" width="475" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="8OJ-KV-KHd"/>
@@ -800,6 +779,28 @@
                                     <segue destination="xyF-Wg-X8i" kind="show" identifier="inviteFriend" id="NzL-FK-QgO"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-NQ-T54">
+                                <rect key="frame" x="63" y="171" width="475" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8W8-OG-m1c"/>
+                                    <constraint firstAttribute="width" constant="482" id="DRH-Fl-qBy"/>
+                                    <constraint firstAttribute="height" constant="45" id="GAp-d2-YbW"/>
+                                    <constraint firstAttribute="width" constant="280" id="KfW-cv-FBM"/>
+                                    <constraint firstAttribute="height" constant="30" id="mZD-JN-WlY"/>
+                                    <constraint firstAttribute="width" constant="400" id="meL-KD-k7f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DRH-Fl-qBy"/>
+                                        <exclude reference="GAp-d2-YbW"/>
+                                        <exclude reference="KfW-cv-FBM"/>
+                                        <exclude reference="mZD-JN-WlY"/>
+                                        <exclude reference="meL-KD-k7f"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
