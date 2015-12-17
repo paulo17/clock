@@ -45,7 +45,8 @@ class EventSynchroniser {
             
             let query = PFQuery(className: Event.parseClassName)
             query.whereKey("user", equalTo: user)
-            //query.whereKey("", equalTo: )
+            query.whereKey("createdAt", greaterThan: NSDate.yesterday())
+            query.orderByDescending("createdAt")
             
             query.findObjectsInBackgroundWithBlock({ (PFObjects, error) -> Void in
                 if error == nil {
