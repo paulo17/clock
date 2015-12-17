@@ -12,6 +12,8 @@
 		6B032D281C20561800983F7D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B032D271C20561800983F7D /* CustomTextField.swift */; };
 		6B0C46281C220D610059D9B3 /* GuestSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C46271C220D610059D9B3 /* GuestSynchroniser.swift */; };
 		6B0C462A1C220DEF0059D9B3 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C46291C220DEF0059D9B3 /* Guest.swift */; };
+		6B0C46301C2233180059D9B3 /* CheckinSynchroniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C462F1C2233180059D9B3 /* CheckinSynchroniser.swift */; };
+		6B0C46321C2233300059D9B3 /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C46311C2233300059D9B3 /* Checkin.swift */; };
 		6B1254D01C20AEBA00B10CFA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1254C41C20AEBA00B10CFA /* Bolts.framework */; };
 		6B1254D11C20AEBA00B10CFA /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B1254C51C20AEBA00B10CFA /* FacebookSDKStrings.bundle */; };
 		6B1254D21C20AEBA00B10CFA /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1254C61C20AEBA00B10CFA /* FBAudienceNetwork.framework */; };
@@ -86,6 +88,8 @@
 		6B0C46251C22073D0059D9B3 /* try.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = try.playground; sourceTree = "<group>"; };
 		6B0C46271C220D610059D9B3 /* GuestSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestSynchroniser.swift; sourceTree = "<group>"; };
 		6B0C46291C220DEF0059D9B3 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		6B0C462F1C2233180059D9B3 /* CheckinSynchroniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinSynchroniser.swift; sourceTree = "<group>"; };
+		6B0C46311C2233300059D9B3 /* Checkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
 		6B1254C41C20AEBA00B10CFA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6B1254C51C20AEBA00B10CFA /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		6B1254C61C20AEBA00B10CFA /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 				6B4CDE421C208C9E000AB56E /* EventSynchroniser.swift */,
 				6B0312671C21758E00D48AE4 /* UserSynchroniser.swift */,
 				6B0C46271C220D610059D9B3 /* GuestSynchroniser.swift */,
+				6B0C462F1C2233180059D9B3 /* CheckinSynchroniser.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				6BBE2E831C1F72760085B2D3 /* User.swift */,
 				6BC670EA1C20288E001CC579 /* Event.swift */,
 				6B0C46291C220DEF0059D9B3 /* Guest.swift */,
+				6B0C46311C2233300059D9B3 /* Checkin.swift */,
 			);
 			name = Model;
 			path = Clock/Model;
@@ -562,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0C46321C2233300059D9B3 /* Checkin.swift in Sources */,
 				6B5D4D3E1C20C0B300B7EB09 /* EventTableViewCell.swift in Sources */,
 				6B5D4D401C20C18700B7EB09 /* EventDetailViewController.swift in Sources */,
 				6B8142671C22050200D3E4AD /* FriendCollectionViewCell.swift in Sources */,
@@ -578,6 +585,7 @@
 				6BAB9A421C1F3A28004D2408 /* RegisterViewController.swift in Sources */,
 				6B1A89241C203F0E00B72307 /* ParseModelProtocol.swift in Sources */,
 				6BAB9A411C1F3A28004D2408 /* LoginViewController.swift in Sources */,
+				6B0C46301C2233180059D9B3 /* CheckinSynchroniser.swift in Sources */,
 				6BBE2E841C1F72760085B2D3 /* User.swift in Sources */,
 				6B0312681C21758E00D48AE4 /* UserSynchroniser.swift in Sources */,
 				6B3BF40C1C1F01E40023EC48 /* AppDelegate.swift in Sources */,

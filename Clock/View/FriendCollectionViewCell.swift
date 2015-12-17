@@ -15,4 +15,5 @@ class FriendCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewWrapper: UIView!
     @IBOutlet weak var shortNameLabel: UILabel!
     
+    
 }

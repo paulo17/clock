@@ -34,6 +34,8 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         dateLabel.text = event.date.toString(format: .Custom("HH:mm"))
         addressLabel.text = event.address
         completeDate.text = event.date.toString(format: .ISO8601(ISO8601Format.Date))
+        
+        getGuests()
     }
     
     func getGuests() {
@@ -60,7 +62,7 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(FriendCollectionViewCell.identifier, forIndexPath: indexPath) as! FriendCollectionViewCell
-        
+                
         return cell
     }
     
