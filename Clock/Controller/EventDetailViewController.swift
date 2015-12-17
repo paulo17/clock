@@ -18,6 +18,7 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var completeDate: UILabel!
     
     @IBOutlet weak var friendCollection: UICollectionView!
+    @IBOutlet weak var checkinButton: UIButton!
     
     var event: Event!
     lazy var users = [PFUser]()
@@ -31,11 +32,24 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
             navigationItem.title = "Evenement sans nom"
         }
         
+        // set date label
         dateLabel.text = event.date.toString(format: .Custom("HH:mm"))
         addressLabel.text = event.address
         completeDate.text = event.date.toString(format: .ISO8601(ISO8601Format.Date))
         
+        // get guests list
         getGuests()
+        
+        // check user checkin
+        checkCheckin { (status) -> Void in
+            if status {
+                self.checkinButton.enabled = false
+                self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 0.5)
+            } else {
+                self.checkinButton.enabled = true
+                self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 1)
+            }
+        }
     }
     
     func getGuests() {
@@ -62,6 +76,23 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
     
+    func checkCheckin(completionHandler: (status: Bool) -> Void) {
+        if let currentUser = PFUser.currentUser() {
+            
+            if let PFEvent = event.PFobject {
+                
+                CheckinSynchroniser.getUserEventCheckin(currentUser, event: PFEvent, completionHandler: { (checkin, error) -> Void in
+                    if checkin == nil {
+                        completionHandler(status: false)
+                    } else {
+                        completionHandler(status: true)
+                    }
+                })
+                
+            }
+        }
+    }
+    
     // MARK: - Action methods
     
     @IBAction func checkinAction(sender: AnyObject) {
@@ -71,10 +102,12 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
             if let PFEvent = event.PFobject {
                 
                 CheckinSynchroniser.getUserEventCheckin(currentUser, event: PFEvent, completionHandler: { (checkin, error) -> Void in
-                    print(checkin)
                     if checkin == nil {
                         let checkin = Checkin(coordonate: (lat: 0.0, long: 0.0), status: true)
                         CheckinSynchroniser.saveObject(checkin, event: PFEvent)
+                        
+                        self.checkinButton.enabled = false
+                        self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 0.5)
                     }
                 })
                 

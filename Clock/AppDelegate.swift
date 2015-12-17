@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyB5CFNfES73KgHOJKDDYt5a8ZtWnHSF0UE")
         
         UINavigationBar.appearance().barTintColor = UIColorFromRGBA("006195")
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         checkLoginUser()
         

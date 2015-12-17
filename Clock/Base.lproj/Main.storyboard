@@ -1211,7 +1211,9 @@
                                     <constraint firstAttribute="height" constant="45" id="nEL-Fk-qXC"/>
                                     <constraint firstAttribute="width" constant="260" id="yVk-X4-ckO"/>
                                 </constraints>
-                                <state key="normal" title="Check in"/>
+                                <state key="normal" title="Check in">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.54901960780000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="yVk-X4-ckO"/>
@@ -1295,6 +1297,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="3mE-fS-EV9" id="rO8-uQ-B25"/>
+                        <outlet property="checkinButton" destination="v1e-Vf-OdP" id="dFC-pZ-pqm"/>
                         <outlet property="completeDate" destination="o3y-cF-0F9" id="O5P-Qx-1kl"/>
                         <outlet property="dateLabel" destination="pBu-mz-bQu" id="hNF-R4-Yu8"/>
                         <outlet property="friendCollection" destination="aGh-qp-lKD" id="Isq-jN-b1q"/>
@@ -1355,4 +1358,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="rjT-tM-xvs"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
