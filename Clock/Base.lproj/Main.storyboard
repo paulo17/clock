@@ -17,6 +17,7 @@
             <string>Lato-Light</string>
             <string>Lato-Light</string>
             <string>Lato-Light</string>
+            <string>Lato-Light</string>
         </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
@@ -449,7 +450,7 @@
             </objects>
             <point key="canvasLocation" x="1894" y="-1087"/>
         </scene>
-        <!--Account View Controller-->
+        <!--Profil-->
         <scene sceneID="Nqv-EA-lGp">
             <objects>
                 <viewController id="gxj-3f-VPP" customClass="AccountViewController" customModule="clock" customModuleProvider="target" sceneMemberID="viewController">
@@ -464,16 +465,78 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="iuB-O0-V0x">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uRI-SB-jQv">
+                                <rect key="frame" x="0.0" y="342" width="600" height="209"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Photo" translatesAutoresizingMaskIntoConstraints="NO" id="3mv-wg-Brw">
+                                <rect key="frame" x="248" y="100" width="104" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="BKw-9R-D6z"/>
+                                    <constraint firstAttribute="width" constant="104" id="Cgc-C9-iID"/>
+                                    <constraint firstAttribute="height" constant="100" id="owo-I1-xSd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="owo-I1-xSd"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul Boiseau" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asj-RY-jZ1">
+                                <rect key="frame" x="20" y="226" width="560" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hDP-du-nbX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iuB-O0-V0x" secondAttribute="trailing" id="3BF-dM-XWg"/>
+                            <constraint firstItem="3mv-wg-Brw" firstAttribute="leading" secondItem="L8M-LT-NFg" secondAttribute="leadingMargin" constant="224" id="BQb-p1-K0W"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="asj-RY-jZ1" secondAttribute="bottom" constant="80" id="E5o-Fs-nbD"/>
+                            <constraint firstItem="K9m-zC-mKC" firstAttribute="top" secondItem="uRI-SB-jQv" secondAttribute="bottom" id="GJV-Hi-bQ8"/>
+                            <constraint firstItem="asj-RY-jZ1" firstAttribute="top" secondItem="3mv-wg-Brw" secondAttribute="bottom" constant="23" id="I1d-U8-doy"/>
+                            <constraint firstAttribute="trailing" secondItem="uRI-SB-jQv" secondAttribute="trailing" id="Icc-aj-oXd"/>
+                            <constraint firstItem="asj-RY-jZ1" firstAttribute="top" secondItem="3mv-wg-Brw" secondAttribute="bottom" constant="22" id="Kc9-d1-3Hs"/>
                             <constraint firstItem="iuB-O0-V0x" firstAttribute="top" secondItem="L8M-LT-NFg" secondAttribute="top" id="L4N-5n-uz9"/>
                             <constraint firstAttribute="bottom" secondItem="iuB-O0-V0x" secondAttribute="bottom" id="RJp-fi-Qpn"/>
                             <constraint firstItem="iuB-O0-V0x" firstAttribute="leading" secondItem="L8M-LT-NFg" secondAttribute="leading" id="SQz-xg-YgM"/>
+                            <constraint firstItem="asj-RY-jZ1" firstAttribute="leading" secondItem="L8M-LT-NFg" secondAttribute="leadingMargin" id="TOV-hs-mbB"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="asj-RY-jZ1" secondAttribute="bottom" constant="80" id="WXp-mn-kde"/>
+                            <constraint firstItem="3mv-wg-Brw" firstAttribute="centerX" secondItem="L8M-LT-NFg" secondAttribute="centerX" id="YtV-UG-Fbq"/>
+                            <constraint firstItem="3mv-wg-Brw" firstAttribute="top" secondItem="wIa-Wj-yBR" secondAttribute="bottom" constant="36" id="cVF-nn-PZG"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="wIa-Wj-yBR" secondAttribute="bottom" constant="278" id="dUt-wz-cfe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3mv-wg-Brw" secondAttribute="trailing" constant="224" id="eFQ-wq-Fg9"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="asj-RY-jZ1" secondAttribute="bottom" constant="91" id="kH7-oW-zhi"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="wIa-Wj-yBR" secondAttribute="bottom" constant="267" id="kLQ-Gx-IrA"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="3mv-wg-Brw" secondAttribute="bottom" constant="128" id="kV7-Lf-mAJ"/>
+                            <constraint firstItem="3mv-wg-Brw" firstAttribute="top" secondItem="wIa-Wj-yBR" secondAttribute="bottom" constant="45" id="qEE-P4-lT5"/>
+                            <constraint firstItem="asj-RY-jZ1" firstAttribute="top" secondItem="3mv-wg-Brw" secondAttribute="bottom" constant="17" id="rkv-Ww-Lhe"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="leading" secondItem="L8M-LT-NFg" secondAttribute="leading" id="sCQ-NN-Lxl"/>
+                            <constraint firstItem="uRI-SB-jQv" firstAttribute="top" secondItem="asj-RY-jZ1" secondAttribute="bottom" constant="91" id="sda-gf-ker"/>
+                            <constraint firstItem="asj-RY-jZ1" firstAttribute="trailing" secondItem="L8M-LT-NFg" secondAttribute="trailingMargin" id="yZn-oh-F9m"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="I1d-U8-doy"/>
+                                <exclude reference="rkv-Ww-Lhe"/>
+                                <exclude reference="BQb-p1-K0W"/>
+                                <exclude reference="eFQ-wq-Fg9"/>
+                                <exclude reference="qEE-P4-lT5"/>
+                                <exclude reference="E5o-Fs-nbD"/>
+                                <exclude reference="WXp-mn-kde"/>
+                                <exclude reference="kH7-oW-zhi"/>
+                                <exclude reference="kLQ-Gx-IrA"/>
+                                <exclude reference="kV7-Lf-mAJ"/>
+                                <exclude reference="sda-gf-ker"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="3FY-3x-azv">
+                    <navigationItem key="navigationItem" title="Profil" id="3FY-3x-azv">
                         <barButtonItem key="leftBarButtonItem" title="Deconnexion" id="atp-Ix-oMG">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -481,6 +544,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="avatarImage" destination="3mv-wg-Brw" id="Gdw-x3-kU3"/>
+                        <outlet property="nameTextField" destination="asj-RY-jZ1" id="8rf-fu-W2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gie-3a-pKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

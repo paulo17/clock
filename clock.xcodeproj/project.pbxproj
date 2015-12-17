@@ -225,6 +225,14 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		6B0FDFAA1C22F9CC00A41FFE /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
 		6B1A893E1C20460100B72307 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,10 +358,10 @@
 		6BAB9A3D1C1F3A28004D2408 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B0FDFAA1C22F9CC00A41FFE /* Account */,
 				6B0C46261C2208C20059D9B3 /* Login */,
 				6BCD81E21C216CA5002035FA /* Event */,
 				6BE88EA01C2010C300427E57 /* HomeViewController.swift */,
-				6B4CDE3D1C206D05000AB56E /* AccountViewController.swift */,
 				6B4CDE3F1C206D82000AB56E /* NavigationController.swift */,
 			);
 			name = Controller;

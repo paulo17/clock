@@ -11,12 +11,15 @@ import Parse
 
 class AccountViewController: UIViewController {
     
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var nameTextField: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        
+        if let user = PFUser.currentUser() {
+            nameTextField.text = user.username
+        }
     }
     
     @IBAction func userLogout(sender: AnyObject) {
@@ -26,5 +29,5 @@ class AccountViewController: UIViewController {
             presentViewController(loginView, animated: true, completion: nil)
         }
     }
-
+    
 }
