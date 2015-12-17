@@ -37,7 +37,7 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     // MARK: - Action methods
-
+    
     @IBAction func addEvent(sender: AnyObject) {
         
         if let address = self.address, let location = self.coordonate {
@@ -69,7 +69,6 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
         let user = users[indexPath.row]
         
         cell.shortNameLabel.text = user.username
-        cell.viewWrapper.layer.cornerRadius = 30
         
         return cell
     }

@@ -9,8 +9,9 @@
 import UIKit
 import Parse
 import AFDateHelper
+import CoreLocation
 
-class EventDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class EventDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -20,16 +21,29 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var friendCollection: UICollectionView!
     @IBOutlet weak var checkinButton: UIButton!
     
-    var event: Event!
+    var event: Event! {
+        didSet {
+            if let name = event.name {
+                navigationItem.title = name
+            } else {
+                navigationItem.title = "Evenement sans nom"
+            }
+        }
+    }
+    
     lazy var users = [PFUser]()
+    lazy var userCoordonnate = CLLocationCoordinate2D()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name = event.name {
-            navigationItem.title = name
-        } else {
-            navigationItem.title = "Evenement sans nom"
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
         }
         
         // set date label
@@ -51,6 +65,15 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
             }
         }
     }
+    
+    // MARK: - CoreLocation
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation = locations[0]
+        self.userCoordonnate = userLocation.coordinate
+    }
+    
+    // MARK: - Functions
     
     func getGuests() {
         
@@ -103,7 +126,15 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
                 
                 CheckinSynchroniser.getUserEventCheckin(currentUser, event: PFEvent, completionHandler: { (checkin, error) -> Void in
                     if checkin == nil {
-                        let checkin = Checkin(coordonate: (lat: 0.0, long: 0.0), status: true)
+                        
+                        var coordonate = (lat: 0.0, long: 0.0)
+                        
+                        if CLLocationManager.locationServicesEnabled() {
+                            coordonate.lat = self.userCoordonnate.latitude
+                            coordonate.long = self.userCoordonnate.longitude
+                        }
+                        
+                        let checkin = Checkin(coordonate: coordonate, status: true)
                         CheckinSynchroniser.saveObject(checkin, event: PFEvent)
                         
                         self.checkinButton.enabled = false
