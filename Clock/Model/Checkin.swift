@@ -13,5 +13,13 @@ class Checkin: ParseModelProcotol {
     static var parseClassName = "Checkin"
     
     var PFobject: PFObject?
+    
+    let coordonate: (lat: Double, long: Double)
+    let status: Bool
+    
+    init(coordonate: (lat: Double, long: Double), status: Bool) {
+        self.coordonate = coordonate
+        self.status = status
+    }
 
 }

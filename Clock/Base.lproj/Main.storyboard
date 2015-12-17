@@ -1187,6 +1187,10 @@
                                             <constraint firstItem="sQw-RJ-tph" firstAttribute="leading" secondItem="LTm-aZ-z9z" secondAttribute="leading" id="VQe-1t-u1F"/>
                                             <constraint firstAttribute="bottom" secondItem="sQw-RJ-tph" secondAttribute="bottom" id="aEy-hd-nV1"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="shortNameLabel" destination="2sk-kB-5Fb" id="WGY-Eu-pce"/>
+                                            <outlet property="viewWrapper" destination="sQw-RJ-tph" id="Qpy-9H-5DQ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -1213,6 +1217,9 @@
                                         <exclude reference="yVk-X4-ckO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="checkinAction:" destination="Zlk-5A-gxd" eventType="touchUpInside" id="OaS-ta-iRB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -9,6 +9,39 @@
 import Parse
 
 class CheckinSynchroniser {
-
-
+    
+    static func saveObject(checkin: Checkin, event: PFObject) -> PFObject {
+        
+        let PFCheckin = PFObject(className: Checkin.parseClassName)
+        
+        PFCheckin["lat"] = checkin.coordonate.lat
+        PFCheckin["long"] = checkin.coordonate.long
+        PFCheckin["status"] = checkin.status
+        PFCheckin["user"] = PFUser.currentUser()
+        PFCheckin["event"] = event
+        
+        PFCheckin.saveInBackground()
+        
+        return PFCheckin
+    }
+    
+    static func getUserEventCheckin(user: PFUser, event: PFObject, completionHandler: (checkin: Checkin?, error: NSError?) -> Void) {
+        
+        let query = PFQuery(className: Checkin.parseClassName)
+        query.whereKey("user", equalTo: user)
+        query.whereKey("event", equalTo: event)
+        
+        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+            if let pfcheckin = object {
+                
+                let checkin = Checkin(coordonate: (lat: pfcheckin["lat"] as! Double, long: pfcheckin["long"] as! Double), status: pfcheckin["status"] as! Bool)
+                checkin.PFobject = object
+                
+                completionHandler(checkin: checkin, error: nil)
+            } else {
+                completionHandler(checkin: nil, error: error)
+            }
+        }
+        
+    }
 }

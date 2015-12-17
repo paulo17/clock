@@ -67,14 +67,8 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(FriendCollectionViewCell.identifier, forIndexPath: indexPath) as! FriendCollectionViewCell
         
         let user = users[indexPath.row]
-    
-        var shortName = "\(indexPath.row)" // TODO: use username
         
-        if let firstname = user["firstname"] as? String, let lastname = user["lastname"] as? String {
-            shortName = "\(firstname.characters.first)\(lastname.characters.first)"
-        }
-    
-        cell.shortNameLabel.text = shortName
+        cell.shortNameLabel.text = user.username
         cell.viewWrapper.layer.cornerRadius = 30
         
         return cell

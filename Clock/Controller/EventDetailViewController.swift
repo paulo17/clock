@@ -45,13 +45,42 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
             GuestSynchroniser.getGuestsByEvent(PFEvent) { (fetchedUsers, error) -> Void in
                 if error == nil {
                     if let users = fetchedUsers {
-                        self.users += users
-                        self.friendCollection.reloadData()
+                        
+                        for user in users {
+                            user.fetchIfNeededInBackgroundWithBlock({ (pfuser, error) -> Void in
+                                if pfuser != nil {
+                                    self.users.append(user)
+                                    self.friendCollection.reloadData()
+                                }
+                            })
+                        }
+                        
                     }
                 }
             }
             
         }
+    }
+    
+    // MARK: - Action methods
+    
+    @IBAction func checkinAction(sender: AnyObject) {
+        
+        if let currentUser = PFUser.currentUser() {
+            
+            if let PFEvent = event.PFobject {
+                
+                CheckinSynchroniser.getUserEventCheckin(currentUser, event: PFEvent, completionHandler: { (checkin, error) -> Void in
+                    print(checkin)
+                    if checkin == nil {
+                        let checkin = Checkin(coordonate: (lat: 0.0, long: 0.0), status: true)
+                        CheckinSynchroniser.saveObject(checkin, event: PFEvent)
+                    }
+                })
+                
+            }
+        }
+        
     }
     
     // MARK: - UICollectionView DataSource & Delegate
@@ -62,7 +91,11 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(FriendCollectionViewCell.identifier, forIndexPath: indexPath) as! FriendCollectionViewCell
-                
+        
+        if let username = users[indexPath.row].username {
+            cell.shortNameLabel.text = username
+        }
+        
         return cell
     }
     
