@@ -14,12 +14,13 @@ protocol SearchFriendDelegate: class {
 }
 
 class SearchFriendViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var usersTableView: UITableView!
     
     lazy var users = [PFUser]()
     lazy var friends = [PFUser]()
+    
     weak var delegate: SearchFriendDelegate?
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -81,9 +82,9 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
+        
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! UserTableViewCell
         let user = users[indexPath.row]
         
@@ -109,9 +110,9 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func cancelAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
-
+        
     }
-
+    
     @IBAction func validateAction(sender: AnyObject) {
         delegate?.getFriends(self.friends, sender: sender)
         self.dismissViewControllerAnimated(true, completion: nil)

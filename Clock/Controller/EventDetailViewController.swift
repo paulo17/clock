@@ -35,6 +35,8 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     lazy var userCoordonnate = CLLocationCoordinate2D()
     let locationManager = CLLocationManager()
     
+    var timer: NSTimer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +68,16 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
                 self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 1)
             }
         }
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        // kill timer on view close
+        if timer != nil {
+            timer!.invalidate()
+            timer = nil
+        }
     }
     
     // MARK: - CoreLocation
@@ -76,6 +88,29 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     // MARK: - Functions
+    
+    func updateTimer() {
+        
+        let now = NSDate()
+        
+        if now.isEarlierThanDate(event.date) {
+            
+            let diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: now, toDate: event.date, options: NSCalendarOptions.init(rawValue: 0))
+            
+            if diffDateComponents.day > 0 {
+                dateLabel.text = "\(diffDateComponents.day)j \(diffDateComponents.hour)h \(diffDateComponents.minute)m \(diffDateComponents.second)s"
+            } else if diffDateComponents.hour > 0 {
+                dateLabel.text = "\(diffDateComponents.hour)h \(diffDateComponents.minute)m \(diffDateComponents.second)s"
+            } else {
+                dateLabel.text = "\(diffDateComponents.minute)m \(diffDateComponents.second)s"
+                dateLabel.textColor = UIColorFromRGBA("FF6680")
+            }
+            
+        } else {
+            timer!.invalidate()
+            timer = nil
+        }
+    }
     
     func getGuests() {
         

@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().barTintColor = UIColor.whiteColor()
         
+        UIStatusBarStyle.LightContent
+        
         checkLoginUser()
         
         return true

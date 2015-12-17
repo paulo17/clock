@@ -45,6 +45,7 @@ class EventSynchroniser {
             
             let query = PFQuery(className: Event.parseClassName)
             query.whereKey("user", equalTo: user)
+            //query.whereKey("", equalTo: )
             
             query.findObjectsInBackgroundWithBlock({ (PFObjects, error) -> Void in
                 if error == nil {
@@ -62,7 +63,7 @@ class EventSynchroniser {
                             let event = Event(name: object["name"] as! String, date: object["date"] as! NSDate, address: object["address"] as! String, lat: object["lat"] as! Double, long: object["long"] as! Double, loose: loose)
                             event.PFobject = object
                             events.append(event)
-    
+                            
                         }
                         
                         completionHandler(events: events, error: nil)
