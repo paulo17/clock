@@ -23,11 +23,8 @@ class EventFriendViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UINavigationBar.appearance().barTintColor = UIColorFromRGBA("006195")
         navigationItem.title = name
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     

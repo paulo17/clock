@@ -59,13 +59,17 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         getGuests()
         
         // check user checkin
-        checkCheckin { (status) -> Void in
+        getCheckin { (checkin, status) -> Void in
             if status {
                 self.checkinButton.enabled = false
                 self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 0.5)
             } else {
                 self.checkinButton.enabled = true
                 self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 1)
+            }
+            
+            if let checkin = checkin {
+                self.toggleCheckinTitleButton(checkin.status)
             }
         }
         
@@ -136,20 +140,28 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
     
-    func checkCheckin(completionHandler: (status: Bool) -> Void) {
+    func getCheckin(completionHandler: (checkin: Checkin?, status: Bool) -> Void) {
         if let currentUser = PFUser.currentUser() {
             
             if let PFEvent = event.PFobject {
                 
                 CheckinSynchroniser.getUserEventCheckin(currentUser, event: PFEvent, completionHandler: { (checkin, error) -> Void in
                     if checkin == nil {
-                        completionHandler(status: false)
-                    } else {
-                        completionHandler(status: true)
+                        completionHandler(checkin: nil, status: false)
+                    } else if let checkin = checkin {
+                        completionHandler(checkin: checkin, status: true)
                     }
                 })
                 
             }
+        }
+    }
+    
+    func toggleCheckinTitleButton(status: Bool) {
+        if status {
+            checkinButton.setTitle("A l'heure", forState: UIControlState.Normal)
+        } else {
+            checkinButton.setTitle("En retard", forState: UIControlState.Normal)
         }
     }
     
@@ -171,10 +183,14 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
                             coordonate.long = self.userCoordonnate.longitude
                         }
                         
-                        let checkin = Checkin(coordonate: coordonate, status: true)
+                        let now = NSDate()
+                        let status: Bool = now.isEarlierThanDate(self.event.date) ? true : false
+                        
+                        let checkin = Checkin(coordonate: coordonate, status: status)
                         CheckinSynchroniser.saveObject(checkin, event: PFEvent)
                         
                         self.checkinButton.enabled = false
+                        self.toggleCheckinTitleButton(status)
                         self.checkinButton.backgroundColor = UIColorFromRGBA("ffffff", alpha: 0.5)
                     }
                 })

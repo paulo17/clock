@@ -32,7 +32,6 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
         
         searchBar.delegate = self
         searchBar.showsCancelButton = false
-        UINavigationBar.appearance().barTintColor = UIColorFromRGBA("FFFFFF")
         
         // fetch all user by default
         UserSynchroniser.getAllUser { (users, error) -> Void in
@@ -42,10 +41,6 @@ class SearchFriendViewController: UIViewController, UITableViewDataSource, UITab
                 }
             }
         }
-    }
-    
-    deinit {
-        UINavigationBar.appearance().barTintColor = UIColorFromRGBA("006195")
     }
     
     // MARK: - Function

@@ -10,6 +10,12 @@ import Parse
 
 class UserSynchroniser {
     
+    /**
+     Get a list of PFUser object by name
+     
+     - parameter username: String
+     - parameter completionHandler: (users: [PFUser]?, error: NSError?) -> Void
+     */
     static func getUserByName(username: String, completionHandler: (users: [PFUser]?, error: NSError?) -> Void) {
         
         if let query = PFUser.query() {
@@ -37,6 +43,11 @@ class UserSynchroniser {
         
     }
     
+    /**
+     Get all PFUser stored on Parse Service
+     
+     - parameter completionHandler: (users: [PFUser]?, error: NSError?) -> Void
+     */
     static func getAllUser(completionHandler: (users: [PFUser]?, error: NSError?) -> Void) {
         
         if let query = PFUser.query() {

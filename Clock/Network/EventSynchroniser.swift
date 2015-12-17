@@ -10,6 +10,13 @@ import Parse
 
 class EventSynchroniser {
     
+    /**
+     Persit Event object in Parse Service
+     
+     - parameter event: Event
+     
+     - returns: PFObject
+     */
     static func saveObject(event: Event) -> PFObject {
         
         let PFEvent = PFObject(className: Event.parseClassName)
@@ -27,18 +34,11 @@ class EventSynchroniser {
         return PFEvent
     }
     
-    static func getObject() -> PFObject? {
-        return PFObject()
-    }
-    
-    static func updateObject() -> PFObject? {
-        return PFObject()
-    }
-    
-    static func deleteObject() {
-        
-    }
-    
+    /**
+     Get Event PFObject and parse into Event object
+     
+     - parameter completionHandler: List of events
+     */
     static func getUserEvent(completionHandler: (events: [Event]?, error: NSError?) -> ()) {
         
         if let user = PFUser.currentUser() {

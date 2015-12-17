@@ -10,6 +10,14 @@ import Parse
 
 class CheckinSynchroniser {
     
+    /**
+     Persit Checkin object in Parse Service
+     
+     - parameter checkin: Checkin
+     - parameter event:   PFObject
+     
+     - returns: PFObject
+     */
     static func saveObject(checkin: Checkin, event: PFObject) -> PFObject {
         
         let PFCheckin = PFObject(className: Checkin.parseClassName)
@@ -25,6 +33,13 @@ class CheckinSynchroniser {
         return PFCheckin
     }
     
+    /**
+     Get checkin user for event
+     
+     - parameter user: PFUser
+     - parameter event: Event
+     - parameter completionHandler: (checkin: Checkin?, error: NSError?) -> Void
+     */
     static func getUserEventCheckin(user: PFUser, event: PFObject, completionHandler: (checkin: Checkin?, error: NSError?) -> Void) {
         
         let query = PFQuery(className: Checkin.parseClassName)

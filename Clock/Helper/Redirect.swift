@@ -8,6 +8,12 @@
 
 import UIKit
 
+/**
+ Redirect by changing present view controller
+ 
+ - parameter current:  UIViewControlelr
+ - parameter to:      UIViewController
+ */
 func redirect(from current: UIViewController, to: UIViewController) {
     to.modalTransitionStyle = .CrossDissolve
     current.presentViewController(to, animated: true, completion: nil)

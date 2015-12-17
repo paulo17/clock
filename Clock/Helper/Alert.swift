@@ -8,6 +8,13 @@
 
 import UIKit
 
+/**
+ Show alert controller
+ 
+ - parameter currentView: UIViewController
+ - parameter message: String
+ - parameter action: String
+ */
 func alertDefault(currentView: UIViewController, message: String, action: String = "Annuler") {
     
     let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: UIAlertControllerStyle.Alert)

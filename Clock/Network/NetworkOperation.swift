@@ -11,7 +11,7 @@ import Parse
 
 protocol NetworkOperation {
     
-    static func saveObject(model: ParseModelProcotol)
+    static func saveObject(model: ParseModelProcotol) -> PFObject
     
     static func getObject() -> PFObject?
     
