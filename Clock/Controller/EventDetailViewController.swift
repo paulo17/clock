@@ -24,7 +24,7 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
     var event: Event! {
         didSet {
             if let name = event.name {
-                navigationItem.title = name
+                navigationItem.title = name.capitalizedString
             } else {
                 navigationItem.title = "Evenement sans nom"
             }
@@ -50,6 +50,8 @@ class EventDetailViewController: UIViewController, UICollectionViewDataSource, U
         dateLabel.text = event.date.toString(format: .Custom("HH:mm"))
         addressLabel.text = event.address
         completeDate.text = event.date.toString(format: .ISO8601(ISO8601Format.Date))
+        checkinButton.layer.cornerRadius = 5
+        looseLabel.text = event.loose
         
         // get guests list
         getGuests()

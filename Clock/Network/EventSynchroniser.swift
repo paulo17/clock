@@ -20,6 +20,7 @@ class EventSynchroniser {
         PFEvent["lat"] = event.lat
         PFEvent["long"] = event.long
         PFEvent["user"] = PFUser.currentUser()
+        PFEvent["loose"] = event.loose
         
         PFEvent.saveInBackground()
         
