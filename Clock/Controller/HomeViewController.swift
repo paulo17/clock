@@ -34,6 +34,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: - Tableview Datasource & Delegate
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
@@ -46,6 +47,24 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        let event = events[indexPath.row]
+        EventSynchroniser.deleteObject(event) { (status, error) -> Void in
+            if status {
+                self.events.removeAtIndex(indexPath.row)
+                self.eventTableView.reloadData()
+            } else {
+                alertDefault(self, message: "Erreur lors de la suppresion")
+            }
+        }
+    }
+    
+    // MARK: - Navigation methods
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

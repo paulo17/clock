@@ -1215,7 +1215,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBu-mz-bQu">
-                                <rect key="frame" x="48" y="95" width="504" height="79"/>
+                                <rect key="frame" x="20" y="95" width="560" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="bfi-5p-myz"/>
                                 </constraints>
@@ -1337,7 +1337,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="3mE-fS-EV9" secondAttribute="trailing" constant="28" id="iON-zr-kih"/>
                             <constraint firstItem="o3y-cF-0F9" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" id="ia4-vx-bUz"/>
                             <constraint firstItem="uEd-t2-itU" firstAttribute="top" secondItem="3mE-fS-EV9" secondAttribute="bottom" constant="22" id="kbQ-Db-hG8"/>
-                            <constraint firstItem="pBu-mz-bQu" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" constant="28" id="r5l-yy-TY6"/>
+                            <constraint firstItem="pBu-mz-bQu" firstAttribute="leading" secondItem="67F-PX-TO4" secondAttribute="leadingMargin" id="r5l-yy-TY6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aGh-qp-lKD" secondAttribute="trailing" constant="49" id="rK4-5O-g4F"/>
                             <constraint firstItem="v1e-Vf-OdP" firstAttribute="centerX" secondItem="67F-PX-TO4" secondAttribute="centerX" id="sH6-1T-T8a"/>
                             <constraint firstItem="MP2-vl-B4L" firstAttribute="top" secondItem="3mE-fS-EV9" secondAttribute="bottom" constant="284" id="ssy-Oo-aLM"/>
@@ -1349,7 +1349,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="uEd-t2-itU" secondAttribute="trailing" id="z73-2J-Tpn"/>
                             <constraint firstItem="MP2-vl-B4L" firstAttribute="top" secondItem="uEd-t2-itU" secondAttribute="bottom" constant="232" id="zph-ew-G5N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pBu-mz-bQu" secondAttribute="trailing" constant="28" id="zx8-5D-ZkH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pBu-mz-bQu" secondAttribute="trailing" constant="28" id="zxv-nQ-mB2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pBu-mz-bQu" secondAttribute="trailing" id="zxv-nQ-mB2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

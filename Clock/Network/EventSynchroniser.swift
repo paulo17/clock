@@ -35,6 +35,24 @@ class EventSynchroniser {
     }
     
     /**
+     Delete object in Parse Service
+     
+     - parameter event:             Event
+     - parameter completionHandler: (status: Bool, error: NSError?) -> Void
+     */
+    static func deleteObject(event: Event, completionHandler: (status: Bool, error: NSError?) -> Void) {
+        if let object = event.PFobject {
+            object.deleteInBackgroundWithBlock({ (status, error) -> Void in
+                if status {
+                    completionHandler(status: true, error: nil)
+                } else if let error = error {
+                    completionHandler(status: false, error: error)
+                }
+            })
+        }
+    }
+    
+    /**
      Get Event PFObject and parse into Event object
      
      - parameter completionHandler: List of events
